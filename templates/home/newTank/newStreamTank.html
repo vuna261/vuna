@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<div>
+    <form/>
+        <fieldset style="width: 1100px;">
+            <legend style="font-size: 20px"><p><b>Stream</b></p></legend>
+            <fieldset style="width: 1100px;">
+                <legend style="font-size: 18px"><p><b>Fluid</b></p></legend>
+                <table cellspacing="10px" width="1100px;">
+                    <tr>
+                        <td><span style="font-size: 16px;">Fluid&emsp;&emsp;&emsp;&emsp;</span></td>
+                        <td><input list="Fluid" name="Fluid" size="40"/>
+                            <datalist id="Fluid">
+                                <option value="A"></option>
+                            </datalist>
+                        </td>
+
+                    </tr>
+                </table>
+                <table cellspacing="10px" width="1000px;">
+                    <tr>
+                        <td><span style="font-size: 16px;">Fluid Height</span></td>
+                        <td><input type="text" name="FluidHeight" size="20"/></td>
+                        <td><span style="font-size: 16px;">Percentage of Fluid Leaving the Dike</span></td>
+                        <td><input type="text" name="PFLD" size="20"/></td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 16px;">Percentage of Fluid Leaving the Dike but Remains on Site</span></td>
+                        <td><input type="text" name="PFLDRS" size="20"/></td>
+                        <td><span style="font-size: 16px;">Percentage of Fluid Going offsite</span></td>
+                        <td><input type="text" name="PFLDGoffsite" size="20"/></td
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend><b>Environment Condition</b></legend>
+                <table cellspacing="10px" width="1000px;">
+            <tr>
+                <td><span style="font-size: 16px">NaOH Concentration (%)</span></td>
+                <td><input type="text" name="NaOHConcentration"/></td>
+                <td><span style="font-size: 16px">Release Fluid Percent Toxic (%)</span></td>
+                <td><input type="text" name="RFPT"/></td>
+            </tr>
+            <tr>
+                <td><span style="font-size: 16px">Chloride Ion (ppm)</span></td>
+                <td><input type="text" name="ChlorideIon"/></td>
+                <td><span style="font-size: 16px">CO3 Concentration in Water (ppm)</span></td>
+                <td><input type="text" name="CO3"/></td>
+            </tr>
+            <tr>
+                <td><span style="font-size: 16px">H2S Content in Water (ppm)</span></td>
+                <td><input type="text" name="H2SContent"/></td>
+                <td><span style="color: red;font-size: 16px">PH of Water</span></td>
+                <td><input type="text" name="PHWater"/></td>
+            </tr>
+            <tr>
+                  <td><span style="color: red;font-size: 16px">Exposed To Acid Gas Treating Amine</span></td>
+                  <td><input type="checkbox" value= 1 list="EAGTA" name="EAGTA"/>
+
+            </tr>
+            <tr>
+
+                <td><span style="font-size: 16px">Amine Solution Composition</span></td>
+                <td><input list="ASC" name="ASC" size="30"/>
+                        <datalist id="ASC">
+                            <option value="A"></option>
+                            <option value="B"></option>
+
+                        </datalist>
+                </td>
+
+            </tr>
+            <tr>
+                <td><span style="font-size: 16px">Exposure to Amine</span></td>
+                <td><input list="ExposureAmine" name="ExposureAmine" size="30"/>
+                <datalist id="ExposureAmine">
+                    <option value="A"></option>
+                    <option value="B"></option>
+
+                </datalist>
+            </td>
+            </tr>
+
+            <tr>
+                <td><span style="color: red;font-size: 16px"> Aqueous Phase During Operation</span></td>
+                <td><input type="checkbox" value= 1  list="APDO" name="APDO"/>
+
+                </td>
+
+                </td>
+            </tr>
+            <tr>
+                <td><span style="color: red;font-size:16px"> Environment Contains H2S</span></td>
+                <td><input type="checkbox" value= 1  list="EnvironmentCH2S" name="EnvironmentCH2S"/>
+
+                </td>
+                <td><span style="color: red;font-size:16px"> Aqueous Phase During Shut Down</span></td>
+                <td><input type="checkbox" value= 1  list="APDSD" name="APDSD"/>
+
+                </td>
+            </tr>
+            <tr>
+                <td><span style="font-size: 16px">Presence of Cyanides</span></td>
+                <td><input type="checkbox" value= 1 list="PresenceCyanides" name="PresenceCyanides"/>
+
+                </td>
+                <td><span style="color: red;font-size:16px"> Presence of Hydrofluoric Acid</span> </td>
+                <td><input type="checkbox" value= 1 list="PHA" name="PHA"/>
+
+
+                </td>
+            </tr>
+            <tr>
+                <td><span style="color: red;font-size:16px"> Environment Contains Caustic</br> in Any Concentration</span></td>
+                <td><input type="checkbox" value= 1 list="ECCAC" name="ECCAC"/>
+
+
+                </td>
+                <td><span style="color: red;font-size:16px"> Process Contains Hydrogen</span></td>
+                <td><input type="checkbox" value= 1 list="PCH" name="PCH"/>
+
+                </td>
+            </tr>
+            <tr>
+                <td><span style="color: red;font-size:16px"> Material is Exposed to Fluids, Mists, or</br> Solids Containing Chlorine Internally</span> </td>
+                <td><input type="checkbox" value= 1  list="MEFMSCC" name="MEFMSCC"/>
+
+                </td>
+                <td><span style="color: red;font-size:16px"> Exposed to Sulphur-Bearing </br>Compounds</span></td>
+                <td><input type="checkbox" value= 1 list="ESBC" name="ESBC"/>
+
+                </td>
+            </tr>
+            <tr><td></td><td><input  style="font-size: 16px" type="submit" class="button" value="Creat new Stream"></td></tr>
+
+        </table>
+    </fieldset>
+ </fieldset>
+</div>
+</body>
+</html>
+

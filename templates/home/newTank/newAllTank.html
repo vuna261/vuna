@@ -1,0 +1,869 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  {% load staticfiles %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+</head>
+<body>
+<div id="menu_top">
+    <ul>
+
+        <li><a href="login" accesskey="4" title="">ADMINISTRATOR</a></li>
+        <li><a href="#" accesskey="3" title="">CONTACT US</a></li>
+        <li><a href="login" accesskey="2" title="">RISK WISK</a></li>
+        <li class="current_page_item"><a href="home" accesskey="1" title="">HOMEPAGE</a></li>
+    </ul>
+</div>
+<div id="slogan">
+    <h1>CORTERK  PROJECT</h1>
+</div>
+<div id="line"></div>
+<div id="main">
+    <div id="main-left">
+        <ul>
+            <h2>Menu Site</h2>
+            <li><a href="#">Manager Site</a></li>
+            <li><a href="newSite">Add new Site</a></li>
+            <li><a href="#">Risk Summary</a></li>
+        </ul>
+    </div>
+<div id="main-right">
+    <form action="" >
+        <fieldset style="width: 1000px">
+              <legend style="font-size: 20px"><p><b>Assessment General Information</b></p></legend>
+            <fieldset style="width: 900px;">
+
+                <legend style="font-size: 18px"><p><b>Assessment</b></p></legend></br>
+            <table>
+                <tr>
+                    <td>Assessment Name</td>
+                    <td><input type="text" name="AssessmentName" value="" size="40"/></td>
+                </tr>
+                <tr>
+                    <td>Assessment Date</td>
+                    <td><input type="date" size="40" value="" name="AssessmentDate"/></td>
+                </tr>
+                <tr>
+                    <td>Risk Analysis Period&nbsp;</td>
+                    <td><input type="text" name="RiskAnalysisPeriod" value="" size="40">&ensp;months </td>
+                </tr>
+            </table>
+        </fieldset>
+
+            <fieldset style="width: 900px;">
+                <legend style="font-size: 18px"><p><b>Equipment</b></p></legend></br>
+               <table>
+                   <tr>
+                       <td>Equipment Number</td>
+                       <td><input type="text" name="EquipmentNumber" value="" size="40"/></td>
+                   </tr>
+                   <tr>
+                       <td>Equipment Type</td>
+                       <td><input type="text" name="EquipmentType" value="" size="40"/> </td>
+                   </tr>
+                   <tr>
+                       <td>Design Code</td>
+                       <td><input type="text" name="DesignCode" value="" size="40"/></td>
+                   </tr>
+                   <tr>
+                       <td>Site</td>
+                       <td><input type="text" name="Plant" value="" size="40"/></td>
+                   </tr>
+                   <tr>
+                       <td>Facility</td>
+                       <td><input type="text" name="Facility" value="" size="40"/></td>
+                   </tr>
+                   <tr>
+                       <td>Manufacturer</td>
+                       <td><input type="text" name="Manufacturer" value="" size="40"/></td>
+                   </tr>
+                   <tr>
+                       <td>Comission Date</td>
+                       <td><input type="date" name="ComissionDate" value="" size="40"/></td>
+                   </tr>
+                   <tr>
+                       <td>Equipment Name</td>
+                       <td><input type="text" name="EquipmentName" value="" size="40"/> </td>
+                   </tr>
+                   <tr>
+                       <td>Process Desciption&emsp;</td>
+                       <td><input type="text" name="ProcessDesciption" value="" size="40"/></td>
+                   </tr>
+               </table>
+            </fieldset>
+
+
+            <fieldset style="width: 900px">
+                <legend style="font-size: 18px"><p><b>Component</b></p></legend></br>
+               <table>
+                   <tr>
+                       <td>Component Number</td>
+                       <td><input type="text" name="ComponentNumber" value="" size="40"/></td>
+                   </tr>
+                   <tr>
+                       <td>Component Type</td>
+                       <td><input type="text" name="ComponentType" value="" size="40"/></td>
+                   </tr>
+                   <tr>
+                       <td>API Component Type</td>
+                       <td><input type="text" name="APIComponentType" value="" size="40"/></td>
+                   </tr>
+                   <tr>
+                       <td>Component Name</td>
+                       <td><input type="text" name="ComponentName" value="" size="40"/></td>
+                   </tr>
+                   <tr>
+                       <td>Risk Links to Equipment Risk</td>
+                       <td><input type="checkbox" value= 1  name="RLTER" /></td>
+                   </tr>
+                   <tr>
+                       <td>Report Template</td>
+                       <td><input list="ReportTemplate" name="ReportTemplate" value="" size="40"/>
+                           <datalist id="ReportTemplate">
+                               <option value="A"></option>
+                           </datalist>
+                       </td>
+
+                   </tr>
+               </table>
+            </fieldset>
+        </fieldset>
+        <fieldset style="width: 1000px;">
+            <legend><p><b>Equipment</b></p></legend>
+            <table   cellspacing="10px" width="1000px;">
+                <tr>
+                    <td><span style="font-size: 16px">Administrative Control for Upset Management</span></td>
+                    <td><input type="checkbox" value= 1 list="Admin" name="Admin"  />
+
+                    </td>
+
+
+                    <td><span style="font-size: 16px">Component is Welded </span></td>
+                    <td><input type="checkbox" value= 1 list="ComponentWelded" name="ComponentWelded" />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">Highly Effective Inspection for Deadlegs</span></td>
+                    <td><input type="checkbox" value= 1 list="Highly" name="Highly" list="Highly" />
+
+                    </td>
+                    <td><span style="color: red;font-size: 16px"> Cylic Operation</span></td>
+                    <td><input type="checkbox" value= 1  list="CylicOper" name="CylicOper" />
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">Downtime Protection Used</span></td>
+                    <td><input type="checkbox" value= 1  list="Downtime" name="Downtime"  />
+
+                    </td>
+                    <td><span style="font-size: 16px">Steamed Out Prior to Water Flushing</span></td>
+                    <td><input type="checkbox" value= 1  list="Steamed" name="Steamed"  />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">Heat Traced</span></td>
+                    <td><input type="checkbox" value= 1  list="HeatTraced" name="HeatTraced" />
+
+                    </td>
+                    <td><span style="font-size: 16px">PWHT</span></td>
+                    <td><input type="checkbox" value= 1  list="PWHT" name="PWHT"  />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">Interface at Soil or Water</span></td>
+                    <td><input type="checkbox" value= 1  name="InterfaceSoilWater" list="InterfaceSoilWater"  />
+
+
+                    </td>
+                    <td><span style="font-size: 16px">Liner Online Monitoring</span></td>
+                    <td><input type="checkbox" value= 1  list="LOM" name="LOM"  />
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><span style="font-size: 16px">Pressurisation Controlled by Admin</span></td>
+                    <td><input type="checkbox" value= 1 list="PressurisationControlled" name="PressurisationControlled" />
+
+                    </td>
+                    </td>
+                    <td><span style="font-size: 16px">Presence of Sulphides, Moisture </br>and Oxygen During Shutdown&</span></td>
+                    <td><input type="checkbox" value= 1  list="PresenceofSulphidesShutdow" name="PresenceofSulphidesShutdow" />
+
+
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td><span style="font-size: 16px">Equipment is Operating for Many Years at </br>Lowest Expected Temperature</span></td>
+                    <td><input type="checkbox" value= 1 list="EquOper" name="EquOper" />
+
+                    </td>
+                    <td><span style="font-size: 16px">Presence of Sulphides, Moisture </br>and Oxygen During Operation</span></td>
+                    <td><input type="checkbox" value= 1  name="PresenceofSulphides" list="PresenceofSulphides" />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><span style="color:red;font-size: 16px">Material is Exposed to Fluids, Mists or Solids</br> Containing Chlorine Externally</span></td>
+                    <td><input type="checkbox" value= 1  list="MFTF" name="MFTF"/>
+
+                    </td>
+                    <td><span style="font-size: 16px">Tank Is Maintained in Accordance with API 653</span></td>
+                    <td><input type="checkbox" value= 1  list="TMA" name="TMA"/>
+
+                    </td>
+                </tr>
+
+                <table cellspacing="15px" width="1000px;">
+                    <tr>
+                        <td><span style="font-size: 16px">Distance To Ground Water</span></td>
+                        <td><input type="text" name="Distance" value="" size="16"/>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 16px">Min. Required Temperature Before</br> Pressurisation Allowed by Admin</span></td>
+                        <td><input type="text" name="Min" value="" size="16"/>&ensp;&deg;C</td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 16px">Type of Soil</span></td>
+                        <td><input list="TypeSoil" value="" name="TypeSoil" size="48"/>
+                            <datalist id="TypeSoil">
+                                <option value="A"></option>
+                                <option value="B"></option>
+                                <option value="C"></option>
+                                <option value="D"></option>
+
+                            </datalist>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 16px">Adjustment for Settlement</span></td>
+                        <td><input list="Adjustment" value="" name="Adjustment" size="48"/>
+                            <datalist id="Adjustment">
+                                <option value="A"></option>
+                                <option value="B"></option>
+
+                            </datalist>
+                    </tr>
+                <tr>
+                <td><span style="font-size: 16px">External Environment</span></td>
+                <td><input list="ExternalEnvironment" name="ExternalEnvironment" size="48"/>
+                    <datalist id="ExternalEnvironment">
+                        <option value="A"></option>
+                        <option value="B"></option>
+                        <option value="C"></option>
+
+                    </datalist>
+                </td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">Environment Sensitivity</span></td>
+                <td><input list="EnvironmentSensitivity" name="EnvironmentSensitivity" size="48"/>
+                    <datalist id="EnvironmentSensitivity">
+                        <option value="A"></option>
+                        <option value="B"></option>
+                        <option value="C"></option>
+
+                    </datalist>
+                </td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">Thermal History</span></td>
+                    <td><input list="ThermalHistory" name="ThermalHistory" size="48"/>
+                    <datalist id="ThermalHistory">
+                        <option value="A"></option>
+                        <option value="B"></option>
+                        <option value="C"></option>
+
+                    </datalist>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span style="font-size: 16px">Online Monitoring</span></td>
+                    <td><input list="OnlineMonitoring"  name="OnlineMonitoring" size="48"/>
+                     <datalist id="OnlineMonitoring">
+                        <option value="A"></option>
+                        <option value="B"></option>
+
+
+                    </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">System Management Factor</span></td>
+                    <td><input type="number" min="0" max="10000000000000" width="50px" value="SystemManagement" name="SystemManagement" size="20"/></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">Equipment Volume</span></td>
+                    <td><input type="text" value="" size="16" name="EquipmentVolume" />&ensp;m3</td>
+                </tr>
+
+            </table>
+            </table>
+        </fieldset>
+          <fieldset style="width: 1000px;">
+            <legend style="font-size: 18px"><p><b>Component</b></p></legend>
+            <table  cellspacing="15px" cellpadding="10px" width="1000px;">
+                <tr>
+                    <td><span style="font-size: 16px;">Tank Diameter</span></td>
+                    <td><input type="text" value="" name="TankDiameter"/>&ensp;in</td>
+                    <td><span style="font-size: 16px;">Nominal Thickness</span></td>
+                    <td><input type="text" value="" name="NominalThickness"/>&ensp;mm</td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px;">Current Thickness</span></td>
+                    <td><input type="text" value="" name="CurrentThickness"/>&ensp;mm</td>
+                    <td><span style="font-size: 16px;">Min. Required Thickness</span></td>
+                    <td><input type="text" value="" name="Min"/>&ensp;mm</td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px;">Current Corrosion Rate</span></td>
+                    <td><input type="text" value="" name="CurrentCorrosionRate"/>&ensp;mm/yr</td>
+                    <td><span style="font-size: 16px;">Number Inspection</span></td>
+                    <td><input type="text" value="" name="NumberInspection"/></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px;">Damage Found During Inspection</span></td>
+                    <td><input type="checkbox" value= 1 list="DFDI"  name="DFDI"/>
+
+                    </td>
+                    <td><span style="font-size: 16px;">Presence of Cracks</span></td>
+                    <td><input type="checkbox" value= 1 list="PresenceCracks"  name="PresenceCracks"/>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px;">Tramp Elements</span></td>
+                    <td><input type="checkbox" value= 1 list="TrampElements" name="TrampElements"/>
+
+                    </td>
+                    <td><span style="font-size: 16px;">Release Prevention Barrier</span></td>
+                    <td><input type="checkbox" value= 1  list="ReleasePreventionBarrier"  name="ReleasePreventionBarrier"/>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px;">Concrete or Asphalt Foundation</span></td>
+                    <td><input type="checkbox" value= 1 list="ConcreteFoundation"  name="ConcreteFoundation"/>
+
+                    </td>
+
+                </tr>
+            </table>
+            <table  cellspacing="15px" cellpadding="10px" width="1000px;">
+                <tr>
+                    <td><span style="font-size: 16px;">Maximum Brinnell Hardness</br> of Weld</span></td>
+                    <td><input list="Max" name="Max" size="40"/>
+                        <datalist id="Max">
+                            <option value="A"></option>
+                            <option value="B"></option>
+                            <option value="C"></option>
+                        </datalist>
+
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px;">Complexity of Protrusions</span></td>
+                    <td><input list="ComplexityProtrusions" name="ComplexityProtrusions" size="40"/>
+                        <datalist id="ComplexityProtrusions">
+                            <option value="A"></option>
+                            <option value="B"></option>
+                            <option value="C"></option>
+                        </datalist>
+                    <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+                    <td>&emsp;&emsp;&emsp;&emsp;</td>
+
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px;">Severity of Vibration</span></td>
+                    <td><input list="SeverityVibration" name="SeverityVibration" size="40"/>
+                        <datalist id="SeverityVibration">
+                            <option value="A"></option>
+                            <option value="B"></option>
+                            <option value="C"></option>
+                            <option value="D"></option>
+                        </datalist>
+
+                </tr>
+
+
+
+            </table>
+        </fieldset>
+         <fieldset style="width: 1000px;">
+        <legend style="font-size: 20px"><p><b>Operating Condition</b></p></legend>
+        <table  cellspacing="10px" width="1000px;">
+            <tr>
+                <td ><span style="color: red;font-size: 16px">Maximum Operating Temperature</span></td>
+                <td><input type="text" name="MaxOT"/>&ensp;&deg;C</td>
+                <td><span style="font-size: 16px">Maximum Operating Pressure</span></td>
+                <td><input type="text" name="MaxOP"/>&ensp;psi</td>
+            </tr>
+            <tr>
+                <td><span style="color: red;font-size: 16px">Minimum Operating Temperature</span>
+                <td></span><input type="text" name="MinOT"/>&ensp;&deg;C</td>
+                <td><span style="font-size: 16px">Minimum Operating Pressure</span></td>
+                <td><input type="text" name="MinOP"/>&ensp;psi</td>
+            </tr>
+            <tr>
+                <td><span style="color: red;font-size: 16px">Operating Hydrogen Partial Pressure </span></td>
+                <td><input type="text" name="OHPP"/>&ensp;psi</td>
+                <td><span style="font-size: 16px">Flow Rate</span></td>
+                <td><input type="text" name="FlowRate"/>&ensp;m3/hr</td>
+            </tr>
+            <tr>
+                <td><span style="color: red;font-size: 16px">Critical Exposure Temperature</span></td>
+                <td><input type="text" name="CET"/> &ensp;&deg;C</td>
+            </tr>
+        </table>
+        <fieldset style="width: 900px">
+            <legend ><p><b><span style="font-size: 16px">Operating Temperature in Different Temperature Ranger</span></b></p></legend>
+            <table  cellspacing="10px" width="900px;">
+                <tr>
+                    <td ><span style="font-size: 16px">% Operating at -12 &deg;C to  -8 &deg;C </span></td>
+                    <td><input type="text" name="Operating1"/> %</td>
+
+
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">% Operating at -8 &deg;C to  6 &deg;C </span></td>
+                    <td><input type="text" name="Operating2"/> %</td>
+
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">% Operating at 6 &deg;C to  32 &deg;C </span></td>
+                    <td><input type="text" name="Operating3"/> %</td>
+
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">% Operating at 32 &deg;C to  71 &deg;C </span></td>
+                    <td><input type="text" name="Operating4"/> %</td>
+
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">% Operating at 71 &deg;C to  107 &deg;C</span></td>
+                    <td><input type="text" name="Operating5"/> %</td>
+
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">% Operating at 107 &deg;C to  121 &deg;C </span></td>
+                    <td><input type="text" name="Operating6"/> %</td>
+
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">% Operating at 121 &deg;C to  135 &deg;C</span></td>
+                    <td><input type="text" name="Operating7"/> %</td>
+
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">% Operating at 135 &deg;C to  162 &deg;C </span></td>
+                    <td><input type="text" name="Operating8"/> %</td>
+
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">% Operating at 162 &deg;C to  176 &deg;C</span></td>
+                    <td><input type="text" name="Operating9"/> %</td>
+
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">% Operating at 176 &deg;C or above</span></td>
+                    <td><input type="text" name="Operating10"/> %</td>
+
+                </tr>
+
+            </table>
+        </fieldset>
+    </fieldset>
+         <fieldset style="width:1000px;">
+        <legend style="font-size:18px" ><p><b>Material</b></p></legend>
+        <table cellspacing="10px" width="1000px">
+              <tr>
+                <td><span style="font-size: 16px">Material</span></td>
+                <td><input list="Material" name="Material" size="30"/></td>
+            </tr>
+            <tr>
+                <td><span style="font-size: 16px;display: inline-block;">Max.Design Temperature</span></td>
+                <td><input type="text" name="Max"/>&ensp;&deg;C </td>
+                <td><span style="font-size: 16px">Min.Design Temperature</span></td>
+                <td><input type="text" name="Min"/>&ensp;&deg;C</td>
+            </tr>
+            <tr>
+                <td><span style="font-size: 16px">Design Pressure</span></td>
+                <td><input type="text " name="DesignPressure"/>&ensp;psi</td>
+                <td><span style="font-size: 16px">Reference Temperature</span></td>
+                <td><input type="text" name="ReferenceTemperature"/>&ensp;&deg;C </td>
+            </tr>
+            <tr>
+                <td><span style="font-size: 16px">Allowable Stress at</br> Assessment Temperature</span></td>
+                <td><input type="text" name="ASAT"/>&ensp;psi </td>
+                <td><span style="font-size: 16px">Brittle Fracture</br> Governing Thickness</span></td>
+                <td><input type="text" name="BFGT"/>&nbsp;mm</td>
+            </tr>
+            <tr>
+                <td><span style="font-size: 16px">Corrosion Allowance</span></td>
+                <td><input type="text" name="CorrosionAllowance"/>&nbsp;mm </td>
+
+            </tr>
+            <tr>
+                <td><span style="color: red;font-size: 16px">Carbon or Low Alloy Steel</span></td>
+                <td><input type="checkbox" value= 1 list="CoLAS" name="CoLAS"/>
+
+                </td>
+                <td><span style="color: red;font-size: 16px">Austenitic Steel</span></td>
+                <td></span><input type="checkbox" value= 1 list="AusteniticSteel" name="AusteniticSteel"/>
+
+                </td>
+            </tr>
+            <tr>
+
+
+                </td>
+                <td><span style="color:red;font-size: 16px">Nickel-based Alloy</span></td>
+                <td><input type="checkbox" value= 1 list="NickelAlloy" name="NickelAlloy"/>
+
+                </td>
+            </tr>
+            <tr>
+                <td><span style="color: red;font-size: 16px">Chromium &ge;12%</span></td>
+                <td><input type="checkbox" value= 1 list="Chromium" name="Chromium"/>
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <td><span style="font-size: 16px">Sulfur Content</span></td>
+                <td><input list="SulfurContent" name="SulfurContent" size="30"/>
+                        <datalist id="SulfurContent">
+                            <option value="A"/>
+                            <option value="B"/>
+
+                        </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td><span style="font-size: 16px;display: inline-block;">Heat Treatment</span></td>
+                <td><input list="HeatTreatment" name="eatTreatment" size="30"/>
+                        <datalist id="HeatTreatment">
+                            <option value="A"/>
+
+                        </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td><span style="color: rgba(50, 50, 120, 0.93);font-size: 16px">Material Grade to Evaluate</br>Severity of HTHA</span></td>
+                <td><input type="checkbox" value="1" name="MGTEHTHA"/> </td>
+            </tr>
+
+
+            <tr>
+                <td><span style="font-size: 15px">PTA Material Grade</span></td>
+                <td><input list="PTA" name="PTAMaterialGrade" size="30"/>
+                <datalist id="PTA">
+                    <option value="A"></option>
+
+                </datalist>
+            </td>
+            </tr>
+            <tr>
+                <td><span style="font-size: 16px">Material Cost Factor</span></td>
+                <td><input type="text" name="MaterialCostFactor"/> </td>
+            </tr>
+              <tr>
+                <td><span style="font-size: 16px">Production Cost</span></td>
+                <td><input type="text" name="ProductionCost"/> </td>
+            </tr>
+
+        </table>
+
+    </fieldset>
+        <fieldset style="width:1000px;">
+            <legend style="font-size: 18px"><p><b>Coating, Cladding, Lining, Insulation</b></p></legend>
+            <fieldset style="width: 900px">
+                <legend style="font-size: 18px"><p><b>Coating</b></p></legend>
+                <table  cellspacing="10px" width="900px;">
+                <tr>
+                    <td><span style="font-size: 16px">Internal Coating</span></td>
+                    <td><input type="checkbox" value= 1 list="InternalCoating" name="InternalCoating">
+
+                </tr>
+                <tr>
+                    <td><span style="color:red;font-size: 16px">External Coating</span></td>
+                    <td><input type="checkbox" value= 1 list="ExternalCoating" name="ExternalCoating">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">Support Configuration Which Does</br> Not Allow Coating Maintenance</span></td>
+                    <td><input type="checkbox" value= 1 list="SCWD" name="SCWD"/>
+
+                    </td>
+                </tr>
+                <tr >
+                    <td><span style="font-size: 16px">External Coating Installation Date</span></td>
+                    <td><input type="date" name="ExternalCoatingID" value="" size="40" />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><span style="color:red;font-size: 16px">External Coating Quality</span> </td>
+                    <td><input list="ECQ" name="ExternalCoatingQuality" size="40"/>
+                        <datalist id="ECQ">
+                            <option value="A"></option>
+                            <option value="B"></option>
+                            <option value="C"></option>
+                        </datalist>
+                    </td>
+                </tr>
+                </table>
+            </fieldset>
+            <fieldset style="width: 900px">
+                <legend style="font-size: 18px"><p><b>Cladding</b></p></legend>
+                <table  cellspacing="10px" width="900px;">
+                <tr>
+                    <td><span style="font-size: 16px">Internal Cladding</span></td>
+                    <td><input type="checkbox" value= 1 list="InternalCladding" name="InternalCladding"/>
+
+                    </td>
+                    <td>&emsp;&emsp;&emsp;&emsp;</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">Cladding Corrosion Rate</span></td>
+                    <td><input type="text" name="CladdingCorrosionRate" value="" size="20"/>&ensp;mm/yr</td>
+                </tr>
+                </table>
+            </fieldset>
+            <fieldset style="width: 900px">
+                <legend style="font-size: 18px"><p><b>Lining</b></p></legend>
+                <table  cellspacing="10px" width="900px;">
+                <tr>
+                    <td><span style="color:#ff0000;font-size: 16px">Internal Lining </span></td>
+                    <td><input type="checkbox" value= 1 list="InternalLining" name="InternalLining"/>
+                    </td>
+
+                    <td>&ensp;&ensp;</td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">Internal Liner Type</span></td>
+                    <td><input list="ILT" name="InternalLinerType" size="40"/>
+                        <datalist id="ILT">
+                            <option value="A"></option>
+                            <option value="B"></option>
+                            <option value="C"></option>
+                            <option value="D"></option>
+
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">Internal Liner Condition</span></td>
+                    <td><input list="ILC" name="InternalLinerCondition" size="40"/>
+                        <datalist id="ILC">
+                            <option value="A"></option>
+                            <option value="B"></option>
+
+                        </datalist>
+                    </td>
+                </tr>
+                </table>
+            </fieldset>
+            <fieldset style="width: 800px">
+                <legend style="font-size: 18px"><p><b>Insulation</b></p></legend>
+                <table  cellspacing="10px" width="900px;">
+               <tr>
+                    <td><span style="color: #ff0000;font-size: 16px"> External Insulation</span></td>
+                    <td><input  type="checkbox" value= 1 list="ExternalInsulation" name="ExternalInsulation" size="40"/>
+
+                    </td>
+                    <td>&ensp;&ensp;</td>
+                    <td></td>
+               </tr>
+               <tr>
+                    <td><span style="font-size: 16px">Insulation Contains Chlorides&emsp;&ensp;</span></td>
+                    <td><input type="checkbox" value= 1 list="ICC" name="ICC"/>
+
+                    </td>
+               </tr>
+               <tr>
+                    <td><span style="font-size: 16px">External Insulation Type</span></td>
+                    <td><input list="EIT" name="ExternalInsulationType" size="40"/>
+                        <datalist id="EIT">
+                            <option value="A"></option>
+                            <option value="B"></option>
+                            <option value="C"></option>
+                            <option value="D"></option>
+
+                        </datalist>
+                    </td>
+               </tr>
+                    <td><span style="color: #ff0000;font-size: 16px">Insulation Condition</span></td>
+                    <td><input list="IC" name="InsulationCondition" size="40"/>
+                        <datalist id="IC">
+                            <option value="A"></option>
+                            <option value="B"></option>
+                            <option value="C"></option>
+                        </datalist>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+               </tr>
+
+            </table>
+            </fieldset>
+        </fieldset>
+         <fieldset style="width: 1000px;">
+            <legend style="font-size: 20px"><p><b>Stream</b></p></legend>
+            <fieldset style="width: 900px;">
+                <legend style="font-size: 18px"><p><b>Fluid</b></p></legend>
+                <table cellspacing="10px" width="800px;">
+                    <tr>
+                        <td><span style="font-size: 16px;">Fluid&emsp;&emsp;&emsp;&emsp;</span></td>
+                        <td><input list="Fluid" name="Fluid" size="40"/>
+                            <datalist id="Fluid">
+                                <option value="A"></option>
+                            </datalist>
+                        </td>
+
+                    </tr>
+                </table>
+                <table cellspacing="10px" width="900px;">
+                    <tr>
+                        <td><span style="font-size: 16px;">Fluid Height</span></td>
+                        <td><input type="text" name="FluidHeight" size="20"/></td>
+                        <td><span style="font-size: 16px;">Percentage of Fluid Leaving the Dike</span></td>
+                        <td><input type="text" name="PFLD" size="20"/></td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 16px;">Percentage of Fluid Leaving the Dike but Remains on Site</span></td>
+                        <td><input type="text" name="PFLDRS" size="20"/></td>
+                        <td><span style="font-size: 16px;">Percentage of Fluid Going offsite</span></td>
+                        <td><input type="text" name="PFLDGoffsite" size="20"/></td
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset style="width: 900px">
+                <legend><b>Environment Condition</b></legend>
+                <table cellspacing="10px" width="900px;">
+            <tr>
+                <td><span style="font-size: 16px">NaOH Concentration (%)</span></td>
+                <td><input type="text" name="NaOHConcentration"/></td>
+                <td><span style="font-size: 16px">Release Fluid Percent Toxic (%)</span></td>
+                <td><input type="text" name="RFPT"/></td>
+            </tr>
+            <tr>
+                <td><span style="font-size: 16px">Chloride Ion (ppm)</span></td>
+                <td><input type="text" name="ChlorideIon"/></td>
+                <td><span style="font-size: 16px">CO3 Concentration in Water (ppm)</span></td>
+                <td><input type="text" name="CO3"/></td>
+            </tr>
+            <tr>
+                <td><span style="font-size: 16px">H2S Content in Water (ppm)</span></td>
+                <td><input type="text" name="H2SContent"/></td>
+                <td><span style="color: red;font-size: 16px">PH of Water</span></td>
+                <td><input type="text" name="PHWater"/></td>
+            </tr>
+            <tr>
+                  <td><span style="color: red;font-size: 16px">Exposed To Acid Gas Treating Amine</span></td>
+                  <td><input type="checkbox" value= 1 list="EAGTA" name="EAGTA"/>
+
+            </tr>
+            <tr>
+
+                <td><span style="font-size: 16px">Amine Solution Composition</span></td>
+                <td><input list="ASC" name="ASC" size="30"/>
+                        <datalist id="ASC">
+                            <option value="A"></option>
+                            <option value="B"></option>
+
+                        </datalist>
+                </td>
+
+            </tr>
+            <tr>
+                <td><span style="font-size: 16px">Exposure to Amine</span></td>
+                <td><input list="ExposureAmine" name="ExposureAmine" size="30"/>
+                <datalist id="ExposureAmine">
+                    <option value="A"></option>
+                    <option value="B"></option>
+
+                </datalist>
+            </td>
+            </tr>
+
+            <tr>
+                <td><span style="color: red;font-size: 16px"> Aqueous Phase During Operation</span></td>
+                <td><input type="checkbox" value= 1  list="APDO" name="APDO"/>
+
+                </td>
+
+                </td>
+            </tr>
+            <tr>
+                <td><span style="color: red;font-size:16px"> Environment Contains H2S</span></td>
+                <td><input type="checkbox" value= 1  list="EnvironmentCH2S" name="EnvironmentCH2S"/>
+
+                </td>
+                <td><span style="color: red;font-size:16px"> Aqueous Phase During Shut Down</span></td>
+                <td><input type="checkbox" value= 1  list="APDSD" name="APDSD"/>
+
+                </td>
+            </tr>
+            <tr>
+                <td><span style="font-size: 16px">Presence of Cyanides</span></td>
+                <td><input type="checkbox" value= 1 list="PresenceCyanides" name="PresenceCyanides"/>
+
+                </td>
+                <td><span style="color: red;font-size:16px"> Presence of Hydrofluoric Acid</span> </td>
+                <td><input type="checkbox" value= 1 list="PHA" name="PHA"/>
+
+
+                </td>
+            </tr>
+            <tr>
+                <td><span style="color: red;font-size:16px"> Environment Contains Caustic</br> in Any Concentration</span></td>
+                <td><input type="checkbox" value= 1 list="ECCAC" name="ECCAC"/>
+
+
+                </td>
+                <td><span style="color: red;font-size:16px"> Process Contains Hydrogen</span></td>
+                <td><input type="checkbox" value= 1 list="PCH" name="PCH"/>
+
+                </td>
+            </tr>
+            <tr>
+                <td><span style="color: red;font-size:16px"> Material is Exposed to Fluids, Mists, or</br> Solids Containing Chlorine Internally</span> </td>
+                <td><input type="checkbox" value= 1  list="MEFMSCC" name="MEFMSCC"/>
+
+                </td>
+                <td><span style="color: red;font-size:16px"> Exposed to Sulphur-Bearing </br>Compounds</span></td>
+                <td><input type="checkbox" value= 1 list="ESBC" name="ESBC"/>
+
+                </td>
+            </tr>
+
+        </table>
+    </fieldset>
+ </fieldset>
+        <table align="center">
+              <tr><td></td> <td></td><td><input  style="font-size: 16px ; width: 100%" type="submit" class="button" value="Submit"></td></tr>
+        </table>
+
+    </form>
+</div>
+</div>
+</body>
+</html>
+

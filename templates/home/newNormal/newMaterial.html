@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div>
+
+    <form action="" />
+    <fieldset style="width:1100px;">
+        <legend style="font-size: 20px" ><p><b>Material</b></p></legend>
+        <table cellspacing="10px" width="1000px">
+            <tr>
+                <td><span style="font-size: 16px;display: inline-block;">Max.Design Temperature</span></td>
+                <td><input type="text" name="Max"/>&ensp;&deg;C </td>
+                <td><span style="font-size: 16px">Min.Design Temperature</span></td>
+                <td><input type="text" name="Min"/>&ensp;&deg;C</td>
+            </tr>
+            <tr>
+                <td><span style="font-size: 16px">Design Pressure</span></td>
+                <td><input type="text " name="DesignPressure"/>&ensp;psi</td>
+                <td><span style="font-size: 16px">Reference Temperature</span></td>
+                <td><input type="text" name="ReferenceTemperature"/>&ensp;&deg;C </td>
+            </tr>
+            <tr>
+                <td><span style="font-size: 16px">Allowable Stress at</br> Assessment Temperature</span></td>
+                <td><input type="text" name="ASAT"/>&ensp;psi </td>
+                <td><span style="font-size: 16px">Brittle Fracture</br> Governing Thickness</span></td>
+                <td><input type="text" name="BFGT"/>&nbsp;mm</td>
+            </tr>
+            <tr>
+                <td><span style="font-size: 16px">Corrosion Allowance</span></td>
+                <td><input type="text" name="CorrosionAllowance"/>&nbsp;mm </td>
+                <td><span style="font-size: 16px">Sigma Phase </span></td>
+                <td><input type="text" name="SigmaPhase"/>&nbsp;(%)</td>
+            </tr>
+            <tr>
+                <td><span style="color: red;font-size: 16px">Carbon or Low Alloy Steel</span></td>
+                <td><input type="checkbox" value= 1 list="CoLAS" name="CoLAS"/>
+
+                </td>
+                <td><span style="color: red;font-size: 16px">Austenitic Steel</span></td>
+                <td></span><input type="checkbox" value= 1 list="AusteniticSteel" name="AusteniticSteel"/>
+
+                </td>
+            </tr>
+            <tr>
+                <td><span style="color: red;font-size: 16px">Susceptible to Temper</span></td>
+                <td><input type="checkbox" value= 1 list="SusceptibleTemper" name="SusceptibleTemper"/>
+
+                </td>
+                <td><span style="color:red;font-size: 16px">Nickel-based Alloy</span></td>
+                <td><input type="checkbox" value= 1 list="NickelAlloy" name="NickelAlloy"/>
+
+                </td>
+            </tr>
+            <tr>
+                <td><span style="color: red;font-size: 16px">Chromium &ge;12%</span></td>
+                <td><input type="checkbox" value= 1 list="Chromium" name="Chromium"/>
+
+                </td>
+            </tr>
+            <tr>
+                <td><span style="font-size: 16px">Material</span></td>
+                <td><input list="Material" name="Material" size="30"/></td>
+            </tr>
+
+            <tr>
+                <td><span style="font-size: 16px">Sulfur Content</span></td>
+                <td><input list="SulfurContent" name="SulfurContent" size="30"/>
+                        <datalist id="SulfurContent">
+                            <option value="High > 0.01%"/>
+                            <option value="Low 0.002 - 0.01%"/>
+                            <option value="Ultra Low < 0.002%"/>
+                        </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td><span style="font-size: 16px;display: inline-block;">Heat Treatment</span></td>
+                <td><input list="HeatTreatment" name="eatTreatment" size="30"/>
+                        <datalist id="HeatTreatment">
+                            <option value="Annealed"/>
+                            <option value="None"/>
+                            <option value="Normalised Temper"/>
+                            <option value="Quench Temper"/>
+                            <option value="Stress Relieved"/>
+                            <option value="Sub Critical PWHT"/>
+                        </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td><span style="color: rgba(50, 50, 120, 0.93);font-size: 16px">Material Grade to Evaluate</br>Severity of HTHA</span></td>
+                <td><input type="checkbox" value="1" name="MGTEHTHA"/> </td>
+            </tr>
+            <tr>
+                <td><span style="font-size: 15px">HTHA Material Grade</span></td>
+                <td><input list="HTHA" name="HTHAMaterialGrade" size="30"/>
+                <datalist id="HTHA">
+                    <option value="1.25Cr-0.5Mo"/>
+                    <option value="1Cr-0.5Mo"/>
+                    <option value="2.25Cr-1Mo"/>
+                    <option value="C-0.5Mo (Annealed)"/>
+                    <option value="C-0.5Mo (Normalised)"/>
+                    <option value="Carbon Steel"/>
+                    <option value="Not Applicable"/>
+                </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td><span style="color: rgba(50, 50, 120, 0.93);font-size: 16px"> Material Grade to Evaluate</br>Severity of PTA Cracking</span></td>
+                <td><input type="checkbox" value= 1 list="MaterialEvaluate" name="MaterialEvaluate" size="30"/>
+
+                </td>
+            </tr>
+            <tr>
+                <td><span style="font-size: 15px">PTA Material Grade</span></td>
+                <td><input list="PTA" name="PTAMaterialGrade" size="30"/>
+                <datalist id="PTA">
+                    <option value="321 Stainless Stee"/>
+                    <option value="347 Stainless Steel, Alloy 20, Alloy 625, All austenitic weld overlay"/>
+                    <option value="Regular 300 series Stainless Steels and Alloys 600 and 800"/>
+                    <option value="H Grade 300 series Stainless Steels"/>
+                    <option value="L Grade 300 series Stainless Steels"/>
+                    <option value="Not Applicable"/>
+                </datalist>
+            </td>
+            </tr>
+            <tr>
+                <td><span style="font-size: 16px">Material Cost Factor</span></td>
+                <td><input type="text" name="MaterialCostFactor"/> </td>
+            </tr>
+            <tr><td></td><td><input type="submit" class="button" value="Creat new Material" style="font-size: 16px"></td>
+            </tr>
+        </table>
+
+    </fieldset>
+</div>
+</body>
+</html>

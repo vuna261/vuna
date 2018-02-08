@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    {% load staticfiles %}
+    {% load widget_tweaks %}
+    <meta charset="UTF-8">
+     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gijgo/1.7.2/combined/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/gijgo/1.7.2/combined/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <style type="text/css">
+        fieldset.scheduler-border {
+            border: solid 1px #DDDDDD !important;
+            padding: 0 10px 10px 10px;
+            border-bottom: none;
+        }
+
+        legend.scheduler-border {
+            width: auto !important;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: blue;
+        }
+        #Adiv {
+            width:auto; height:auto;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+                            function DFcategory(val) {
+                                if (val <= 2)
+                                    return 1;
+                                else if (val <= 20)
+                                    return 2;
+                                else if (val <= 100)
+                                    return 3;
+                                else if (val <= 1000)
+                                    return 4;
+                                else
+                                    return 5;
+                            }
+                            $(document).ready(function () {
+                                $("#thinningtype").change(function () {
+                                    var thintype = $(this).val();
+                                    var gff = parseFloat($("#gfftotal").val());
+                                    var fms = parseFloat($("#fms").val());
+                                    var sccap1 = parseFloat($("#sccap1").val());
+                                    var sccap2 =parseFloat($("#sccap2").val());
+                                    var sccap3 = parseFloat($("#sccap3").val());
+                                    var brittleap1 = parseFloat($("#brittleap1").val());
+                                    var brittleap2 = parseFloat($("#brittleap2").val());
+                                    var brittleap3 = parseFloat($("#brittleap3").val());
+                                    var hthaap1 = parseFloat($("#hthaap1").val());
+                                    var hthaap2 = parseFloat($("#hthaap2").val());
+                                    var hthaap3 = parseFloat($("#hthaap3").val());
+                                    var pippingap1 = parseFloat($("#pippingap1").val());
+                                    var pippingap2 = parseFloat($("#pippingap2").val());
+                                    var pippingap3 = parseFloat($("#pippingap3").val());
+                                    var thinninglocalap1 = parseFloat($("#thinninglocalap1").val());
+                                    var thinninglocalap2 = parseFloat($("#thinninglocalap2").val());
+                                    var thinninglocalap3 = parseFloat($("#thinninglocalap3").val());
+                                    var thinninggeneralap1 = parseFloat($("#thinninggeneralap1").val());
+                                    var thinninggeneralap2 = parseFloat($("#thinninggeneralap2").val());
+                                    var thinninggeneralap3 = parseFloat($("#thinninggeneralap3").val());
+
+                                    var dfLocalAp1 = sccap1 + brittleap1 + hthaap1 + pippingap1 + thinninglocalap1;
+                                    var dfLocalAp2 = sccap2 + brittleap2 + hthaap2 + pippingap2 + thinninglocalap2;
+                                    var dfLocalAp3 = sccap3 + brittleap3 + hthaap3 + pippingap3 + thinninglocalap3;
+
+                                    var cateLocalAp1 = DFcategory(dfLocalAp1);
+                                    var cateLocalAp2 = DFcategory(dfLocalAp2);
+                                    var cateLocalAp3 = DFcategory(dfLocalAp3);
+
+                                    var pofLocalAp1 = dfLocalAp1 * gff * fms;
+                                    var pofLocalAp2 = dfLocalAp2 * gff * fms;
+                                    var pofLocalAp3 = dfLocalAp3 * gff * fms;
+
+                                    var dfGeneralAp1 = sccap1 + brittleap1 + hthaap1 + pippingap1 + thinninggeneralap1;
+                                    var dfGeneralAp2 = sccap2 + brittleap2 + hthaap2 + pippingap2 + thinninggeneralap2;
+                                    var dfGeneralAp3 = sccap3 + brittleap3 + hthaap3 + pippingap3 + thinninggeneralap3;
+
+                                    var cateGeneralAp1 = DFcategory(dfGeneralAp1);
+                                    var cateGeneralAp2 = DFcategory(dfGeneralAp2);
+                                    var cateGeneralAp3 = DFcategory(dfGeneralAp3);
+
+                                    var pofGeneralAp1 = dfGeneralAp1 * gff * fms;
+                                    var pofGeneralAp2 = dfGeneralAp2 * gff * fms;
+                                    var pofGeneralAp3 = dfGeneralAp3 * gff * fms;
+
+                                    if(thintype == "local"){
+                                        $("#totaldfap1").value = dfLocalAp1;
+                                        $("#totaldfap2").value = dfLocalAp2;
+                                        $("#totaldfap3").value = dfLocalAp3;
+
+                                        $("#pofap1").value = pofLocalAp1;
+                                        $("#pofap2").value = pofLocalAp2;
+                                        $("#pofap3").value = pofLocalAp3;
+
+                                        $("#pofap1catalog").value = cateLocalAp1;
+                                        $("#pofap2catalog").value = cateLocalAp2;
+                                        $("#pofap3catalog").value = cateLocalAp3;
+                                    }
+                                    else {
+                                        $("#totaldfap1").value = dfGeneralAp1;
+                                        $("#totaldfap2").value = dfGeneralAp2;
+                                        $("#totaldfap3").value = dfGeneralAp3;
+
+                                        $("#pofap1").value = pofGeneralAp1;
+                                        $("#pofap2").value = pofGeneralAp2;
+                                        $("#pofap3").value = pofGeneralAp3;
+
+                                        $("#pofap1catalog").value = cateGeneralAp1;
+                                        $("#pofap2catalog").value = cateGeneralAp2;
+                                        $("#pofap3catalog").value = cateGeneralAp3;
+                                    }
+                                })
+                            })
+                      </script>
+</head>	
+<body>
+	<div id="menu_top">
+   <ul>
+
+                <li><a href="{% url 'login' %}" accesskey="4" title="">ADMINISTRATOR</a></li>
+                <li><a href="{% url 'contact' %}" accesskey="3" title="">CONTACT US</a></li>
+                <li><a href="{% url 'login' %}" accesskey="2" title="">RBI</a></li>
+                <li class="current_page_item"><a href="{% url 'home' %}" accesskey="1" title="">HOMEPAGE</a></li>
+   </ul>
+</div>
+<div id="slogan">
+     <h1>CORTEK  PROJECT</h1>
+</div>
+<div id="line"></div>
+<div id="main">
+    <div id="main-left">
+        <ul>
+            <h2>DF Result</h2>
+            <li><a href="{% url 'resultca' obj.id_id %}">CA Result</a></li>
+            <li><a href="{% url 'proposalDisplay' assess.componentid_id %}">Back to Component</a></li>
+        </ul>
+    </div>
+    <div id="main-right" align="center">
+    <div id=Adiv >
+     <form method="post" class="form-control">
+         {% csrf_token %}
+         <fieldset class="scheduler-border">
+         <fieldset class="scheduler-border">
+             <legend class="scheduler-border">Initial Factor</legend>
+             <table>
+                  <tr>
+                    <td>Thinning type</td>
+                    <td>
+                        <select class="form-control" id="thinningtype">
+                            <option value="local">Local</option>
+                            <option value="general">General</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Total Generic Frequenc</td>
+                    <td><input class="form-control" type="text" value="{{ obj.gfftotal }}" id="gfftotal" readonly></td>
+                </tr>
+                <tr>
+                    <td>Factor of Management System</td>
+                    <td><input class="form-control" type="text" value="{{ obj.fms }}" id="fms" readonly></td>
+                </tr>
+
+
+             </table>
+
+         </fieldset>
+     	<fieldset class="scheduler-border">
+            <legend class="scheduler-border"><b>Damage Factors and Probability of Failure</b></legend>
+            <table>
+                <tr>
+                    <td style="font-size: 16px">Assessment Priods&emsp;</td>
+                    <td>0 months</td>
+                    <td>36 months </td>
+                    <td>72 months</td>
+                </tr>
+                <tr>
+
+                    <td>Governing Thinning Damage Factor</td>
+                    <td><input  class="form-control" type="text" value="{{ obj.thinningap1 }}" readonly></td>
+                    <td><input  class="form-control" type="text" value="{{ obj.thinningap2 }}" readonly></td>
+                    <td><input  class="form-control" type="text" value="{{ obj.thinningap3 }}" readonly></td>
+                </tr>
+                <tr>
+                    <td>Governing Stress Corrosion Cracking Damage Factor</td>
+                    <td><input class="form-control" type="text" value="{{ obj.sccap1 }}" id="sccap1" readonly></td>
+                    <td><input class="form-control" type="text" value="{{ obj.sccap2 }}" id="sccap2" readonly></td>
+                    <td><input class="form-control" type="text" value="{{ obj.sccap3 }}" id="sccap3" readonly></td>
+                </tr>
+                <tr>
+                    <td>Governing External Damage Factor</td>
+                    <td><input class="form-control" type="text" value="{{ obj.externalap1 }}" id="extap1" readonly></td>
+                    <td><input class="form-control" type="text" value="{{ obj.externalap2 }}" id="extap2" readonly></td>
+                    <td><input class="form-control" type="text" value="{{ obj.externalap3 }}" id="extap3" readonly></td>
+                </tr>
+                <tr>
+                    <td>High Temperature Hydrogen Attack Damage Factor</td>
+                    <td><input class="form-control" type="text" value="{{ obj.htha_ap1 }}" id="hthaap1" readonly></td>
+                    <td><input class="form-control" type="text" value="{{ obj.htha_ap2 }}" id="hthaap2" readonly></td>
+                    <td><input class="form-control" type="text" value="{{ obj.htha_ap3 }}" id="hthaap3" readonly></td>
+                </tr>
+                <tr>
+                    <td>Governing Brittle Fracture Damage Factor</td>
+                    <td><input class="form-control" type="text" value="{{ obj.brittleap1 }}" id="brittleap1" readonly></td>
+                    <td><input class="form-control" type="text" value="{{ obj.brittleap2 }}" id="brittleap2" readonly></td>
+                    <td><input class="form-control" type="text" value="{{ obj.brittleap3 }}" id="brittleap3" readonly></td>
+                </tr>
+                <tr>
+                    <td>Piping Mechanical Fatigue Damage Factor</td>
+                    <td><input class="form-control" type="text" value="{{ obj.fatigueap1 }}" id="pippingap1" readonly></td>
+                    <td><input class="form-control" type="text" value="{{ obj.fatigueap2 }}" id="pippingap2" readonly></td>
+                    <td><input class="form-control" type="text" value="{{ obj.brittleap3 }}" id="pippingap3" readonly></td>
+                </tr>
+                <tr>
+                    <td>Other Damage Factor</td>
+                    <td><input class="form-control" type="text" value="0.0" readonly></td>
+                    <td><input class="form-control" type="text" value="0.0" readonly></td>
+                    <td><input class="form-control" type="text" value="0.0" readonly></td>
+                </tr>
+                <tr>
+                    <td>Total Damage Factor with General Thinning</td>
+                    <td><input class="form-control" type="text" value="{{ obj.thinninggeneralap1 }}" id="thinninggeneralap1" readonly></td>
+                    <td><input class="form-control" type="text" value="{{ obj.thinninggeneralap2 }}" id="thinninggeneralap2" readonly></td>
+                    <td><input class="form-control" type="text" value="{{ obj.thinninggeneralap3 }}" id="thinninggeneralap3" readonly></td>
+                </tr>
+                <tr>
+                    <td>Total Damage Factor with Local Thinning</td>
+                    <td><input class="form-control" type="text" value="{{ obj.thinninglocalap1 }}" id="thinninglocalap1" readonly></td>
+                    <td><input class="form-control" type="text" value="{{ obj.thinninglocalap2 }}" id="thinninglocalap2" readonly></td>
+                    <td><input class="form-control" type="text" value="{{ obj.thinninglocalap3 }}" id="thinninglocalap3" readonly></td>
+                </tr>
+                <tr>
+                    <td>Final Total Damage Factor</td>
+                    <td><input class="form-control" type="text" value="{{ obj.totaldfap1 }}" id="totaldfap1" readonly></td>
+                    <td><input class="form-control" type="text" value="{{ obj.totaldfap2 }}" id="totaldfap2" readonly></td>
+                    <td><input class="form-control" type="text" value="{{ obj.totaldfap3 }}" id="totaldfap3" readonly></td>
+                </tr>
+                <tr>
+                    <td>Probability of Failure</td>
+                    <td><input class="form-control" type="text" value="{{ obj.pofap1 }}" id="pofap1" readonly></td>
+                    <td><input class="form-control" type="text" value="{{ obj.pofap2 }}" id="pofap2" readonly></td>
+                    <td><input class="form-control" type="text" value="{{ obj.pofap3 }}" id="pofap3" readonly></td>
+                </tr>
+                <tr>
+                    <td>Probability of Failure Category</td>
+                    <td><input class="form-control" type="text" value="{{ obj.pofap1category }}" id="pofap1catalog" readonly></td>
+                    <td><input class="form-control" type="text" value="{{ obj.pofap2category }}" id="pofap2catalog" readonly></td>
+                    <td><input class="form-control" type="text" value="{{ obj.pofap3category }}" id="pofap3catalog" readonly></td>
+                </tr>
+     		</table>
+
+     	</fieldset>
+         </fieldset>
+         <br>
+         <table style="text-align: right">
+            <td><button type="submit"  class="btn btn-info" >SAVE CHANGE</button></td>
+        </table>
+     </form>
+    </div>
+    </div>
+</div>
+
+<div id="end">
+    <div id="end_left"  style="margin-top: 10px">
+        <h4 style="font-size: 14px">@2017 Embedded Networking Laboratory</h4>
+    </div>
+    <div id="end_right" style="margin-top: 10px">
+        <h4 style="font-size: 14px">Reference: Kim Anh </h4>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+

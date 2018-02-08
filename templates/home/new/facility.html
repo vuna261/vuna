@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <style type="text/css">
+        fieldset.scheduler-border {
+            border: solid 1px #DDDDDD !important;
+            padding: 0 10px 10px 10px;
+            border-bottom: none;
+        }
+
+        legend.scheduler-border {
+            width: auto !important;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: blue;
+        }
+
+        #Adiv {
+            width:auto; height:auto;
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+
+<body>
+<div id="menu_top">
+   <ul>
+
+                <li><a href="{% url 'login' %}" accesskey="4" title="">ADMINISTRATOR</a></li>
+                <li><a href="{% url 'contact' %}" accesskey="3" title="">CONTACT US</a></li>
+                <li><a href="{% url 'login' %}" accesskey="2" title="">RBI</a></li>
+                <li class="current_page_item"><a href="{% url 'home' %}" accesskey="1" title="">HOMEPAGE</a></li>
+   </ul>
+</div>
+<div id="slogan">
+     <h1>CORTEK  PROJECT</h1>
+</div>
+<div id="line"></div>
+
+<div id="main">
+    <div id="main-left">
+        <ul>
+            <h2>Facility Management</h2>
+            <li><a href="{% url 'facilityDisplay' site.siteid %}">Facility List</a></li>
+            <li><a href="{% url 'facility' site.siteid %}">New Facility</a></li>
+            <li><a href="#">Risk Summary</a></li>
+            <li><a href="{% url 'site_display' %}">Back To Sites</a> </li>
+        </ul>
+    </div>
+<div id="main-right" align="center">
+<div id = Adiv>
+   <form method="post">
+       {% csrf_token %}
+        {% if error.exist %}
+        <p style="color: red; size: 18px">
+            {{ error.exist }}
+        </p>
+        {% endif %}
+       <fieldset class="scheduler-border">
+           <legend class="scheduler-border" ><p><b>Facility</b></p></legend>
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border" ><p><b>Facility Information</b></p></legend>
+            <table >
+                <tr>
+                    <td><span style="font-size: 18px">Facility Name: </span></td>
+                    <td><input type="text" name="FacilityName" value="{{ facility.facilityname }}" size="40" class="form-control" required/> </td>
+                </tr>
+
+                <tr>
+                    <td style="font-size: 18px">Site:</td>
+                   <td><input type="text"  name="site" list="site" value="{{ site.sitename }}" size="30" class="form-control" readonly></td>
+                </tr>
+
+                <tr>
+                    <td style="font-size: 18px">Management System Factor:</td>
+                    <td><input type="number"  name="ManagementSystemFactor" value="{{ facility.managementfactor }}" size="20" min="0.1" max="10" step="0.01" class="form-control" required/></td>
+                </tr>
+            </table>
+        </fieldset>
+           <br>
+
+                <fieldset class="scheduler-border">
+                    <legend class="scheduler-border"><p>Fully-Quantitave COF and FCOF Risk Target</p></legend>
+                     <table >
+                         <tr>
+                              <td style="font-size: 18px">Area(m2/year): &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+                              <td><input type="number" step="0.01" name="Area" size="40" class="form-control" value="{{ facility.risktarget_ac }}" required/> </td>
+                         </tr>
+
+                         <tr>
+                             <td style="font-size: 18px">Financial($/year):&emsp;&emsp;</td>
+                             <td><input type="number" step="0.01" name="Financial" size="40" class="form-control" value="{{ facility.risktarget_fc }}" required/></td>
+                         </tr>
+
+                     </table>
+                </fieldset>
+        </fieldset>
+        </fieldset>
+       <br>
+                 <table style="text-align: right">
+                    <tr>
+                        <td><button type="submit" class="btn btn-info"/>Submit</td>
+
+                    </tr>
+                </table>
+    </form>
+    </div>
+    </div>
+</div>
+<div id="end">
+    <div id="end_left"  style="margin-top: 10px">
+        <h4 style="font-size: 14px">@2017 Embedded Networking Laboratory</h4>
+    </div>
+    <div id="end_right" style="margin-top: 10px">
+        <h4 style="font-size: 14px">Reference: Kim Anh </h4>
+    </div>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+

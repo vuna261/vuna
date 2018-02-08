@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style type="text/css">
+            #Adiv {
+            width:auto; height:auto;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#chkHeader').click(function() {
+                var isChecked = $(this).prop("checked");
+                $('#t01 tr:has(td)').find('input[type="checkbox"]').prop('checked', isChecked);
+            });
+
+            $('#t01 tr:has(td)').find('input[type="checkbox"]').click(function() {
+                var isChecked = $(this).prop("checked");
+                var isHeaderChecked = $("#chkHeader").prop("checked");
+                if (isChecked == false && isHeaderChecked) {
+                    $("#chkHeader").prop('checked', isChecked);
+                }
+                else {
+                    $('#t01 tr:has(td)').find('input[type="checkbox"]').each(function() {
+                        if ($(this).prop("checked") == false)
+                            isChecked = false;
+                     });
+                    $("#chkHeader").prop('checked', isChecked);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="menu_top">
+   <ul>
+
+                <li><a href="{% url 'login' %}" accesskey="1" title="">ADMINISTRATOR</a></li>
+                <li><a href="#" accesskey="2" title="">CONTACT US</a></li>
+                <li><a href="{% url 'login' %}" accesskey="3" title="">RBI</a></li>
+                <li><a href="{% url 'home' %}" accesskey="4" title="">HOMEPAGE</a></li>
+   </ul>
+</div>
+<div id="slogan">
+     <h1>CORTEK  PROJECT</h1>
+</div>
+<div id="line"></div>
+<div id="main">
+    <div id="main-left">
+        <ul>
+            <h2>Component Management</h2>
+            <li><a href="{% url 'component_display' equipment.equipmentid %}">Component List</a></li>
+            <li><a href="{% url 'component' equipment.equipmentid %}">New Component</a></li>
+            <li><a href="#">Risk Summary</a></li>
+            <li><a href="{% url 'equipment_display' equipment.facilityid_id %}">Back To Equipment</a> </li>
+        </ul>
+    </div>
+    <div id="main-right" align="center">
+    <div id = Adiv>
+    <form class="form-control" method="post">
+    {% csrf_token %}
+        <caption><b style="font-size: 20px; color: darkblue">COMPONENTS LIST</b></caption>
+        <table id = "t01"><br>
+        <thead>
+            <tr>
+                <th width="50px"><input type="checkbox" id="chkHeader"></th>
+                <th width="100px">Component Number</th>
+                <th width="100px">Component Name</th>
+                <th width="100px">Equipment Number</th>
+                <th width="100px">Facility Name</th>
+                <th width="100px">Site Name</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for a in obj %}
+
+             <tr >
+                <td align="center"><input type="checkbox" name="{{ a.componentid }}"></td>
+                 <td align="center"><a href="{% url 'proposalDisplay' a.componentid %}">{{ a.componentnumber }}</a></td>
+                 <td align="center">{{ a.componentname }} </td>
+                 <td align="center">{{ a.equipmentid }}</td>
+                 <td align="center">{{ equipment.facilityid }}</td>
+                 <td align="center">{{ equipment.siteid }}</td>
+             </tr>
+
+            {% endfor %}
+        </tbody>
+         </table>
+    <br>
+        <table style="text-align: right">
+            <td>
+                <button class="btn btn-info" type="submit" name="_edit">Edit Selected</button>
+                <button class="btn btn-info" type="submit" name="_delete">Delete Selected</button>
+            </td>
+        </table>
+    </form>
+    </div>
+    </div>
+</div>
+<div id="end">
+    <div id="end_left"  style="margin-top: 10px">
+        <h4 style="font-size: 14px">@2017 Embedded Networking Laboratory</h4>
+    </div>
+    <div id="end_right" style="margin-top: 10px">
+        <h4 style="font-size: 14px">Reference: Kim Anh </h4>
+    </div>
+
+</div>
+</body>
+</html>

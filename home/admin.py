@@ -1,0 +1,22 @@
+from django.contrib import admin;
+from rbi.models import ApiComponentType, ComponentType, EquipmentType, DmCategory, DmItems;
+from rbi.models import Tbl3B21SiConversion, Tbl74SccDmPwht, Tbl52CaPropertiesLevel1, Tbl58CaComponentDm, Tbl59ComponentDamagePerson;
+from rbi.models import Tbl64DmLinningInorganic,Tbl65DmLinningOrganic, Tbl71PropertiesStorageTank, Tbl204DmHtha, Tbl213DmImpactExemption, Tbl214DmNotPwht, Tbl215DmPwht, Tbl511DfbThin, Tbl512DfbThinTankBottom;
+
+admin.site.register(DmCategory);
+admin.site.register(DmItems);
+admin.site.register(EquipmentType);
+admin.site.register(ApiComponentType);
+admin.site.register(ComponentType);
+admin.site.register(Tbl512DfbThinTankBottom);
+admin.site.register(Tbl511DfbThin);
+admin.site.register(Tbl215DmPwht);
+admin.site.register(Tbl214DmNotPwht);
+admin.site.register(Tbl204DmHtha);
+admin.site.register(Tbl65DmLinningOrganic);
+admin.site.register(Tbl64DmLinningInorganic);
+admin.site.register(Tbl59ComponentDamagePerson);
+admin.site.register(Tbl58CaComponentDm);
+admin.site.register(Tbl52CaPropertiesLevel1);
+admin.site.register(Tbl74SccDmPwht);
+admin.site.register(Tbl3B21SiConversion);

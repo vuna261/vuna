@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<div>
+    <form >
+        <fieldset style="width: 1000px;">
+            <legend><p><b>Equipment</b></p></legend>
+            <table   cellspacing="10px" width="1000px;">
+                <tr>
+                    <td><span style="font-size: 16px">Administrative Control for Upset Management</span></td>
+                    <td><input type="checkbox" value= 1 list="Admin" name="Admin"  />
+
+                    </td>
+
+
+                    <td><span style="font-size: 16px">Component is Welded </span></td>
+                    <td><input type="checkbox" value= 1 list="ComponentWelded" name="ComponentWelded" />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">Highly Effective Inspection for Deadlegs</span></td>
+                    <td><input type="checkbox" value= 1 list="Highly" name="Highly" list="Highly" />
+
+                    </td>
+                    <td><span style="color: red;font-size: 16px"> Cylic Operation</span></td>
+                    <td><input type="checkbox" value= 1  list="CylicOper" name="CylicOper" />
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">Downtime Protection Used</span></td>
+                    <td><input type="checkbox" value= 1  list="Downtime" name="Downtime"  />
+
+                    </td>
+                    <td><span style="font-size: 16px">Steamed Out Prior to Water Flushing</span></td>
+                    <td><input type="checkbox" value= 1  list="Steamed" name="Steamed"  />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">Heat Traced</span></td>
+                    <td><input type="checkbox" value= 1  list="HeatTraced" name="HeatTraced" />
+
+                    </td>
+                    <td><span style="font-size: 16px">PWHT</span></td>
+                    <td><input type="checkbox" value= 1  list="PWHT" name="PWHT"  />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">Interface at Soil or Water</span></td>
+                    <td><input type="checkbox" value= 1  name="InterfaceSoilWater" list="InterfaceSoilWater"  />
+
+
+                    </td>
+                    <td><span style="font-size: 16px">Liner Online Monitoring</span></td>
+                    <td><input type="checkbox" value= 1  list="LOM" name="LOM"  />
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><span style="font-size: 16px">Pressurisation Controlled by Admin</span></td>
+                    <td><input type="checkbox" value= 1 list="PressurisationControlled" name="PressurisationControlled" />
+
+                    </td>
+                    </td>
+                    <td><span style="font-size: 16px">Presence of Sulphides, Moisture </br>and Oxygen During Shutdown&</span></td>
+                    <td><input type="checkbox" value= 1  list="PresenceofSulphidesShutdow" name="PresenceofSulphidesShutdow" />
+
+
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td><span style="font-size: 16px">Equipment is Operating for Many Years at </br>Lowest Expected Temperature</span></td>
+                    <td><input type="checkbox" value= 1 list="EquOper" name="EquOper" />
+
+                    </td>
+                    <td><span style="font-size: 16px">Presence of Sulphides, Moisture </br>and Oxygen During Operation</span></td>
+                    <td><input type="checkbox" value= 1  name="PresenceofSulphides" list="PresenceofSulphides" />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><span style="color:red;font-size: 16px">Material is Exposed to Fluids, Mists or Solids</br> Containing Chlorine Externally</span></td>
+                    <td><input type="checkbox" value= 1  list="MFTF" name="MFTF"/>
+
+                    </td>
+                    <td><span style="font-size: 16px">Tank Is Maintained in Accordance with API 653</span></td>
+                    <td><input type="checkbox" value= 1  list="TMA" name="TMA"/>
+
+                    </td>
+                </tr>
+
+                <table cellspacing="15px" width="800px;">
+                    <tr>
+                        <td><span style="font-size: 16px">Distance To Ground Water</span></td>
+                        <td><input type="text" name="Distance" value="" size="16"/>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 16px">Min. Required Temperature Before</br> Pressurisation Allowed by Admin</span></td>
+                        <td><input type="text" name="Min" value="" size="16"/>&ensp;&deg;C</td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 16px">Type of Soil</span></td>
+                        <td><input list="TypeSoil" value="" name="TypeSoil" size="48"/>
+                            <datalist id="TypeSoil">
+                                <option value="A"></option>
+                                <option value="B"></option>
+                                <option value="C"></option>
+                                <option value="D"></option>
+
+                            </datalist>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 16px">Adjustment for Settlement</span></td>
+                        <td><input list="Adjustment" value="" name="Adjustment" size="48"/>
+                            <datalist id="Adjustment">
+                                <option value="A"></option>
+                                <option value="B"></option>
+
+                            </datalist>
+                    </tr>
+                <tr>
+                <td><span style="font-size: 16px">External Environment</span></td>
+                <td><input list="ExternalEnvironment" name="ExternalEnvironment" size="48"/>
+                    <datalist id="ExternalEnvironment">
+                        <option value="A"></option>
+                        <option value="B"></option>
+                        <option value="C"></option>
+
+                    </datalist>
+                </td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">Environment Sensitivity</span></td>
+                <td><input list="EnvironmentSensitivity" name="EnvironmentSensitivity" size="48"/>
+                    <datalist id="EnvironmentSensitivity">
+                        <option value="A"></option>
+                        <option value="B"></option>
+                        <option value="C"></option>
+
+                    </datalist>
+                </td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">Thermal History</span></td>
+                    <td><input list="ThermalHistory" name="ThermalHistory" size="48"/>
+                    <datalist id="ThermalHistory">
+                        <option value="A"></option>
+                        <option value="B"></option>
+                        <option value="C"></option>
+
+                    </datalist>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span style="font-size: 16px">Online Monitoring</span></td>
+                    <td><input list="OnlineMonitoring"  name="OnlineMonitoring" size="48"/>
+                     <datalist id="OnlineMonitoring">
+                        <option value="A"></option>
+                        <option value="B"></option>
+
+
+                    </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">System Management Factor</span></td>
+                    <td><input type="number" min="0" max="10000000000000" width="50px" value="SystemManagement" name="SystemManagement" size="20"/></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 16px">Equipment Volume</span></td>
+                    <td><input type="text" value="" size="16" name="EquipmentVolume" />&ensp;m3</td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Add new Equipment" class="button" style="font-size: 16px
+                    "></td>
+                </tr>
+            </table>
+            </table>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
+

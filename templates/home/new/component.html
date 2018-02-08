@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    {% load staticfiles %}
+    {% load widget_tweaks %}
+    <meta charset="UTF-8">
+     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gijgo/1.7.2/combined/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/gijgo/1.7.2/combined/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <style type="text/css">
+        fieldset.scheduler-border {
+            border: solid 1px #DDDDDD !important;
+            padding: 0 10px 10px 10px;
+            border-bottom: none;
+        }
+
+        legend.scheduler-border {
+            width: auto !important;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: blue;
+        }
+        #Adiv {
+            width:auto; height:auto;
+            margin: 0 auto;
+        }
+    </style>
+</head>	
+<body>
+	<div id="menu_top">
+   <ul>
+
+                <li><a href="{% url 'login' %}" accesskey="4" title="">ADMINISTRATOR</a></li>
+                <li><a href="{% url 'contact' %}" accesskey="3" title="">CONTACT US</a></li>
+                <li><a href="{% url 'login' %}" accesskey="2" title="">RBI</a></li>
+                <li class="current_page_item"><a href="{% url 'home' %}" accesskey="1" title="">HOMEPAGE</a></li>
+   </ul>
+</div>
+<div id="slogan">
+     <h1>CORTEK  PROJECT</h1>
+</div>
+<div id="line"></div>
+<div id="main">
+    <div id="main-left">
+        <ul>
+            <h2>Component Management</h2>
+            <li><a href="{% url 'component_display' obj.equipmentid %}">Component List</a></li>
+            <li><a href="{% url 'component' obj.equipmentid %}">New Component</a></li>
+            <li><a href="#">Risk Summary</a></li>
+            <li><a href="{% url 'equipment_display' obj.facilityid_id %}">Back To Equipment</a> </li>
+        </ul>
+    </div>
+    <div id="main-right" align="center">
+    <div id=Adiv >
+     <form method="post">
+         {% csrf_token %}
+        {% if error.exist %}
+            <p style="color: red; size: 18px">
+            {{ error.exist }}
+            </p>
+        {% endif %}
+     	<fieldset class="scheduler-border">
+            <legend class="scheduler-border"><b>Component</b></legend>
+            <fieldset class="scheduler-border">
+                <legend class="scheduler-border"> <b>Component Information</b></legend>
+     		<table  cellspacing="10px" >
+                <tr>
+                    <td style="font-size: 16px">Equipment Number:&emsp;&emsp;</td>
+                  <td><input  class="form-control" list="equipmentNub" name="equipmentNub" value="{{ obj.equipmentnumber }}" size="30" readonly>
+                </tr>
+
+                <tr>
+                    <td style="font-size: 16px">Equipment Type:</td>
+                    <td><input class="form-control" list="equipmentType" name="eqType" size="30" value="{{ obj.equipmenttypeid }}" readonly>
+                    </td>
+                </tr>
+
+                 <tr>
+                    <td><span style="font-size:16px;">Design Code:</span></td>
+                    <td><input class="form-control" name="designCode" list="designCode" value="{{ obj.designcodeid }}" size="30" readonly></td>
+                </tr>
+                 <tr>
+                    <td><span style="font-size:16px;">Site:</span></td>
+                    <td><input class = "form-control" list="plant" name="plant" value="{{ obj.siteid }}" size="30" readonly></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size:16px;">Facility: </span></td>
+                    <td><input class="form-control" type="text"  name="facility" list="facility" value="{{ obj.facilityid }}" size="30" readonly></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size:16px;">Component Number: </span></td>
+                    <td><input class="form-control" type="text"  name="componentNumer" value="{{ component.componentnumber }}" size="30" required></td>
+                </tr>
+
+                <tr>
+                    <td><span style="font-size:16px;">Component Type: </span></td>
+                    <td><select class="form-control" id="exampleFormControlSelect1" name="componentType" >
+                        {% for a in componenttype %}
+                            {% if a.componenttypename == component.componenttype or a.componenttypeid == component.componenttypeid_id %}
+                                <option selected>{{ a.componenttypename }}</option>
+                            {% else %}
+                                <option>{{ a.componenttypename }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size:16px;">API Component Type: </span></td>
+                    {% if isedit %}
+                    <td><select class="form-control" id="exampleFormControlSelect1" name="apiComponentType" disabled="true">
+                        {%  for a in api %}
+                            {% if a.apicomponenttypename == component.apicomponenttype or a.apicomponenttypeid == component.apicomponenttypeid %}
+                                <option selected>{{ a.apicomponenttypename }}</option>
+                            {% else %}
+                                <option>{{ a.apicomponenttypename }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select></td>
+                    {% else %}
+                    <td><select class="form-control" id="exampleFormControlSelect1" name="apiComponentType" >
+                        {%  for a in api %}
+                            {% if a.apicomponenttypename == component.apicomponenttype or a.apicomponenttypeid == component.apicomponenttypeid %}
+                                <option selected>{{ a.apicomponenttypename }}</option>
+                            {% else %}
+                                <option>{{ a.apicomponenttypename }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select></td>
+                    {% endif %}
+                </tr>
+
+                <tr>
+                    <td><span style="font-size:16px;">Component Name:</span></td>
+                    <td><input class="form-control" type="text"  name="componentName" list="componentName" value="{{ component.componentname }}" size="30" required></td>
+                </tr>
+
+                <tr>
+                    <td><span style="font-size:16px;">Component Risk Links to Component Risk:</span></td>
+                    {% if component.isequipmentlinked %}
+                    <td><input class="form-control" type="checkbox" list="comRisk" name="comRisk" size="30" align="right" checked></td>
+                    {% else %}
+                    <td><input class="form-control" type="checkbox" list="comRisk" name="comRisk" size="30" align="right"></td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <td><span style="font-size:16px;">Description:</span></td>
+                    <td><textarea class="form-control" type="text"  name="decription"   size="30">{{ component.componentdesc }}</textarea></td>
+                </tr>
+     		</table>
+            </fieldset>
+     	</fieldset>
+         <br>
+         <table style="text-align: right">
+             <td><button class="btn btn-info" type="submit">Submit</button> </td>
+         </table>
+     </form>
+    </div>
+    </div>
+</div>
+
+<div id="end">
+    <div id="end_left"  style="margin-top: 10px">
+        <h4 style="font-size: 14px">@2017 Embedded Networking Laboratory</h4>
+    </div>
+    <div id="end_right" style="margin-top: 10px">
+        <h4 style="font-size: 14px">Reference: Kim Anh </h4>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+
