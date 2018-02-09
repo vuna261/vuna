@@ -8,7 +8,7 @@ class MySQL_CAL:
         row = np.zeros(10);
         Cursor = conn.cursor();
         try:
-            sql = "SELECT `MW`,`Density`,`NBP`,`ideal`,`A`,`B`,`C`,`D`,`E`,`Auto` FROM `TBL_52_CA_PROPERTIES_LEVEL_1` WHERE `Fluid` = '" + fluid + "'";
+            sql = "SELECT `MW`,`Density`,`NBP`,`ideal`,`A`,`B`,`C`,`D`,`E`,`Auto` FROM `tbl_52_ca_properties_level_1` WHERE `Fluid` = '" + fluid + "'";
             Cursor.execute(sql);
             for r in Cursor:
                 row[0] = r[0];
@@ -29,7 +29,7 @@ class MySQL_CAL:
         data = "Liquid";
         Cursor = conn.cursor();
         try:
-            sql = "SELECT `Ambient` FROM `TBL_52_CA_PROPERTIES_LEVEL_1` WHERE `Fluid` = '" + fluid + "'";
+            sql = "SELECT `Ambient` FROM `tbl_52_ca_properties_level_1` WHERE `Fluid` = '" + fluid + "'";
             Cursor.execute(sql);
             for r in Cursor:
                 data = r[0];
@@ -41,7 +41,7 @@ class MySQL_CAL:
         data = np.zeros(16);
         Cursor = conn.cursor();
         try:
-            sql = "SELECT * FROM `TBL_58_CA_COMPONENT_DM` WHERE `Fluid` = '" + fluid + "'";
+            sql = "SELECT * FROM `tbl_58_ca_component_dm` WHERE `Fluid` = '" + fluid + "'";
             Cursor.execute(sql);
             for r in Cursor:
                 data[0] = r[2]
@@ -68,7 +68,7 @@ class MySQL_CAL:
         Cursor = conn.cursor();
         data = np.zeros(16);
         try:
-            sql = "SELECT * FROM `TBL_59_COMPONENT_DAMAGE_PERSON` WHERE `Fluid` = '" + fluid + "'";
+            sql = "SELECT * FROM `tbl_59_component_damage_person` WHERE `Fluid` = '" + fluid + "'";
             Cursor.execute(sql);
             for r in Cursor:
                 data[0] = r[1];
@@ -95,7 +95,7 @@ class MySQL_CAL:
         Cursor = conn.cursor();
         data = np.zeros(4);
         try:
-            sql = "SELECT * FROM `TBL_213_DM_IMPACT_EXEMPTION` WHERE `ComponentThickness` = '" + str(thickness) + "'";
+            sql = "SELECT * FROM `tbl_213_dm_impact_exemption` WHERE `ComponentThickness` = '" + str(thickness) + "'";
             Cursor.execute(sql);
             for r in Cursor:
                 data[0] = r[1];
@@ -110,7 +110,7 @@ class MySQL_CAL:
         Cursor = conn.cursor();
         data = np.zeros(7);
         try:
-            sql = "SELECT * FROM `TBL_204_DM_HTHA` WHERE `Susceptibility` = '"+susceptibility+"'";
+            sql = "SELECT * FROM `tbl_204_dm_htha` WHERE `Susceptibility` = '"+susceptibility+"'";
             Cursor.execute(sql);
             for r in Cursor:
                 data[0] = r[2];
@@ -140,7 +140,7 @@ class MySQL_CAL:
         Cursor = conn.cursor();
         data = 0;
         try:
-            sql = "SELECT `" + str(size) + "` FROM `TBL_215_DM_PWHT` WHERE `Tmin-Tref` = '" + str(DeltaT) + "'";
+            sql = "SELECT `" + str(size) + "` FROM `tbl_215_dm_pwht` WHERE `Tmin-Tref` = '" + str(DeltaT) + "'";
             Cursor.execute(sql);
             for r in Cursor:
                 data = r;
@@ -153,9 +153,9 @@ class MySQL_CAL:
         Cursor = conn.cursor();
         try:
             if(Effective == "E"):
-                sql = "SELECT `E` FROM `TBL_511_DFB_THIN` WHERE `art` ='" + str(ART) + "'";
+                sql = "SELECT `E` FROM `tbl_511_dfb_thin` WHERE `art` ='" + str(ART) + "'";
             else:
-                sql = "SELECT `" + Effective + "` FROM `TBL_511_DFB_THIN` WHERE `art` ='" + str(ART) + "' AND `insp` = '" + str(INSP) + "'";
+                sql = "SELECT `" + Effective + "` FROM `tbl_511_dfb_thin` WHERE `art` ='" + str(ART) + "' AND `insp` = '" + str(INSP) + "'";
             Cursor.execute(sql);
             for r in Cursor:
                 data = r;
@@ -167,7 +167,7 @@ class MySQL_CAL:
         data = 0;
         Cursor = conn.cursor();
         try:
-            sql = "SELECT `"+Effective+"` FROM `TBL_512_DFB_THIN_TANK_BOTTOM` WHERE `art` = '"+str(ART)+"'";
+            sql = "SELECT `"+Effective+"` FROM `tbl_512_dfb_thin_tank_bottom` WHERE `art` = '"+str(ART)+"'";
             Cursor.execute(sql);
             for r in Cursor:
                 data = r;
@@ -179,7 +179,7 @@ class MySQL_CAL:
         data = 0;
         Cursor = conn.cursor();
         try:
-            sql = "SELECT `" + Suscep + "` FROM `TBL_64_DM_LINNING_INORGANIC` WHERE `YearsSinceLastInspection` = '" + str(YEAR) + "'";
+            sql = "SELECT `" + Suscep + "` FROM `tbl_64_dm_linning_inorganic` WHERE `YearsSinceLastInspection` = '" + str(YEAR) + "'";
             Cursor.execute(sql);
             for r in Cursor:
                 data = r;
@@ -191,7 +191,7 @@ class MySQL_CAL:
         data = 0;
         Cursor = conn.cursor();
         try:
-            sql = "SELECT `" + Suscep + "` FROM `TBL_65_DM_LINNING_ORGANIC` WHERE `YearInService` = '" + str(YEAR) + "'";
+            sql = "SELECT `" + Suscep + "` FROM `tbl_65_dm_linning_organic` WHERE `YearInService` = '" + str(YEAR) + "'";
             Cursor.execute(sql);
             for r in Cursor:
                 data = r;
@@ -203,7 +203,7 @@ class MySQL_CAL:
         data = 0;
         Cursor = conn.cursor();
         try:
-            sql = "SELECT `" + field + "` FROM `TBL_74_SCC_DM_PWHT` WHERE `SVI` ='" + str(SVI) + "'";
+            sql = "SELECT `" + field + "` FROM `tbl_74_scc_dm_pwht` WHERE `SVI` ='" + str(SVI) + "'";
             Cursor.execute(sql);
             for r in Cursor:
                 data = r;
@@ -215,7 +215,7 @@ class MySQL_CAL:
         data = 0;
         Cursor = conn.cursor();
         try:
-            sql = "SELECT `SIUnits` FROM `TBL_3B21_SI_CONVERSION` WHERE `conversionFactory` = '" + str(locat) + "'";
+            sql = "SELECT `SIUnits` FROM `tbl_3b21_si_conversion` WHERE `conversionFactory` = '" + str(locat) + "'";
             Cursor.execute(sql);
             for r in Cursor:
                 data = r[0];
@@ -227,7 +227,7 @@ class MySQL_CAL:
         data = np.zeros(3);
         Cursor = conn.cursor();
         try:
-            sql = "SELECT `Molecular Weight`,`Liquid Density`,`Liquid Density Viscosity` FROM `TBL_71_PROPERTIES_STORAGE_TANK` WHERE `Fluid`='" + FluidTank + "'";
+            sql = "SELECT `Molecular Weight`,`Liquid Density`,`Liquid Density Viscosity` FROM `tbl_71_properties_storage_tank` WHERE `Fluid`='" + FluidTank + "'";
             Cursor.execute(sql);
             for r in Cursor:
                 data[0] = r[0];

@@ -76,6 +76,9 @@ WSGI_APPLICATION = 'rbi.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
+SILENCED_SYSTEM_CHECKS = [
+    'django_mysql.W002',
+]
 
 DATABASES = {
     'default': {
@@ -88,6 +91,7 @@ DATABASES = {
         'PASSWORD': 'nC4!fD3*',
         'OPTIONS': {
             'autocommit': True,
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         },
     }
 }
