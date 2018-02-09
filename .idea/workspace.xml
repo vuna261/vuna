@@ -42,8 +42,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rbi/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-665">
-              <caret line="95" column="5" lean-forward="false" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
+            <state relative-caret-position="253">
+              <caret line="146" column="1" lean-forward="false" selection-start-line="146" selection-start-column="1" selection-end-line="146" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -52,7 +52,7 @@
       <file leaf-file-name="MYSQL_CAL.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rbi/MYSQL_CAL.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="49">
+            <state relative-caret-position="-308">
               <caret line="229" column="125" lean-forward="false" selection-start-line="229" selection-start-column="125" selection-end-line="229" selection-end-column="125" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -80,6 +80,37 @@
                 <marker date="1518156835699" expanded="true" signature="10765:10833" ph="SELECT COUNT... rw_inspection_history" />
                 <marker date="1518156835699" expanded="true" signature="10765:10913" ph="SELECT COUNT... rw_inspection_history" />
                 <marker date="1518156835699" expanded="true" signature="11270:11436" ph="SELECT MAX(I... rw_inspection_history" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/home/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="1402" column="7" lean-forward="false" selection-start-line="1402" selection-start-column="7" selection-end-line="1402" selection-end-column="7" />
+              <folding>
+                <element signature="e#1059#1665#0" expanded="false" />
+                <element signature="e#1701#3832#0" expanded="false" />
+                <element signature="e#3876#7150#0" expanded="false" />
+                <element signature="e#7198#8308#0" expanded="false" />
+                <element signature="e#8357#9238#0" expanded="false" />
+                <element signature="e#9285#11972#0" expanded="false" />
+                <element signature="e#68321#69126#0" expanded="false" />
+                <element signature="e#71773#74943#0" expanded="false" />
+                <element signature="e#75006#77195#0" expanded="false" />
+                <element signature="e#77257#78501#0" expanded="false" />
+                <element signature="e#78565#79577#0" expanded="false" />
+                <element signature="e#80106#80875#0" expanded="false" />
+                <element signature="e#80926#81855#0" expanded="false" />
+                <element signature="e#81907#82837#0" expanded="false" />
+                <element signature="e#82889#83642#0" expanded="false" />
+                <element signature="e#83695#84481#0" expanded="false" />
+                <element signature="e#84525#84699#0" expanded="false" />
+                <element signature="e#84743#84853#0" expanded="false" />
+                <element signature="e#84901#85087#0" expanded="false" />
+                <element signature="e#85138#86243#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -131,7 +162,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>DF_THI</find>
       <find>DF_EXTERN_CLSCC</find>
       <find>DF_THIN(</find>
       <find>DF_TEMP_EMBRITTLE</find>
@@ -161,6 +191,7 @@
       <find>CUI_I</find>
       <find>CUI_INSP_</find>
       <find>COMPONENT_INSTALL_DATE</find>
+      <find>Display</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -263,12 +294,12 @@
             <path>
               <item name="RBI" type="b2602c69:ProjectViewProjectNode" />
               <item name="RBI" type="462c0819:PsiDirectoryNode" />
-              <item name="rbi" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RBI" type="b2602c69:ProjectViewProjectNode" />
               <item name="RBI" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="rbi" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -674,13 +705,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4777">
           <caret line="877" column="49" lean-forward="false" selection-start-line="877" selection-start-column="49" selection-end-line="877" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8551">
-          <caret line="674" column="59" lean-forward="false" selection-start-line="674" selection-start-column="46" selection-end-line="674" selection-end-column="59" />
+          <folding>
+            <element signature="e#3688#3728#0" expanded="false" />
+            <element signature="e#3757#4591#0" expanded="false" />
+            <element signature="e#6022#7429#0" expanded="false" />
+            <element signature="e#7467#7552#0" expanded="false" />
+            <element signature="e#7592#7675#0" expanded="false" />
+            <element signature="e#7707#7842#0" expanded="false" />
+            <element signature="e#7882#8154#0" expanded="false" />
+            <element signature="e#8187#8635#0" expanded="false" />
+            <element signature="e#8672#10600#0" expanded="false" />
+            <element signature="e#10803#11085#0" expanded="false" />
+            <element signature="e#11120#11183#0" expanded="false" />
+            <element signature="e#11217#11590#0" expanded="false" />
+            <element signature="e#11626#11799#0" expanded="false" />
+            <element signature="e#11839#12355#0" expanded="false" />
+            <element signature="e#12395#12837#0" expanded="false" />
+            <element signature="e#12876#13308#0" expanded="false" />
+            <element signature="e#13347#13780#0" expanded="false" />
+            <element signature="e#13830#14218#0" expanded="false" />
+            <element signature="e#14264#14641#0" expanded="false" />
+            <element signature="e#14691#15188#0" expanded="false" />
+            <element signature="e#15237#15340#0" expanded="false" />
+            <element signature="e#15389#15586#0" expanded="false" />
+            <element signature="e#15624#15809#0" expanded="false" />
+            <element signature="e#15843#16275#0" expanded="false" />
+            <element signature="e#16317#16624#0" expanded="false" />
+            <element signature="e#16666#16993#0" expanded="false" />
+            <element signature="e#17029#17385#0" expanded="false" />
+            <element signature="e#17423#17810#0" expanded="false" />
+            <element signature="e#17848#18207#0" expanded="false" />
+            <element signature="e#18331#18380#0" expanded="false" />
+            <element signature="e#18415#29341#0" expanded="false" />
+            <element signature="e#29381#30697#0" expanded="false" />
+            <element signature="e#30733#32047#0" expanded="false" />
+            <element signature="e#32083#32429#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -688,6 +748,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-391">
           <caret line="38" column="110" lean-forward="false" selection-start-line="38" selection-start-column="101" selection-end-line="38" selection-end-column="110" />
+          <folding>
+            <element signature="e#0#12#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -739,9 +802,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rbi/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#468#496#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="59" column="12" lean-forward="false" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rbi/MYSQL_CAL.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
+        <state relative-caret-position="-308">
           <caret line="229" column="125" lean-forward="false" selection-start-line="229" selection-start-column="125" selection-end-line="229" selection-end-column="125" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
@@ -773,28 +854,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rbi/models.py">
+    <entry file="file://$PROJECT_DIR$/home/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="245">
+          <caret line="1402" column="7" lean-forward="false" selection-start-line="1402" selection-start-column="7" selection-end-line="1402" selection-end-column="7" />
           <folding>
-            <element signature="e#468#496#0" expanded="true" />
+            <element signature="e#1059#1665#0" expanded="false" />
+            <element signature="e#1701#3832#0" expanded="false" />
+            <element signature="e#3876#7150#0" expanded="false" />
+            <element signature="e#7198#8308#0" expanded="false" />
+            <element signature="e#8357#9238#0" expanded="false" />
+            <element signature="e#9285#11972#0" expanded="false" />
+            <element signature="e#68321#69126#0" expanded="false" />
+            <element signature="e#71773#74943#0" expanded="false" />
+            <element signature="e#75006#77195#0" expanded="false" />
+            <element signature="e#77257#78501#0" expanded="false" />
+            <element signature="e#78565#79577#0" expanded="false" />
+            <element signature="e#80106#80875#0" expanded="false" />
+            <element signature="e#80926#81855#0" expanded="false" />
+            <element signature="e#81907#82837#0" expanded="false" />
+            <element signature="e#82889#83642#0" expanded="false" />
+            <element signature="e#83695#84481#0" expanded="false" />
+            <element signature="e#84525#84699#0" expanded="false" />
+            <element signature="e#84743#84853#0" expanded="false" />
+            <element signature="e#84901#85087#0" expanded="false" />
+            <element signature="e#85138#86243#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="59" column="12" lean-forward="false" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rbi/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-665">
-          <caret line="95" column="5" lean-forward="false" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
+        <state relative-caret-position="253">
+          <caret line="146" column="1" lean-forward="false" selection-start-line="146" selection-start-column="1" selection-end-line="146" selection-end-column="1" />
           <folding />
         </state>
       </provider>
