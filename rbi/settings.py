@@ -89,8 +89,8 @@ DATABASES = {
         'PORT': '3306',
         'USER': 'sql2220301',
         'PASSWORD': 'nC4!fD3*',
-        'AUTOCOMMIT': True,
         'OPTIONS': {
+            'autocommit': True,
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         },
     }
