@@ -79,6 +79,7 @@ WSGI_APPLICATION = 'rbi.wsgi.application'
 
 DATABASES = {
     'default': {
+        "CONN_MAX_AGE": 500,
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'sql2220301',
         'HOST': 'sql2.freemysqlhosting.net',
