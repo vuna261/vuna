@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'rbi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'djangorbi',
-        'HOST': 'localhost',
+        'NAME': 'sql2220301',
+        'HOST': 'sql2.freemysqlhosting.net',
         'PORT': '3306',
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'USER': 'sql2220301',
+        'PASSWORD': 'nC4!fD3*',
         'OPTIONS': {
             'autocommit': True,
         },

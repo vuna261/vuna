@@ -42,7 +42,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rbi/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
+            <state relative-caret-position="16167">
               <caret line="952" column="39" lean-forward="false" selection-start-line="952" selection-start-column="39" selection-end-line="952" selection-end-column="39" />
               <folding>
                 <element signature="e#468#496#0" expanded="true" />
@@ -64,9 +64,45 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rbi/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+            <state relative-caret-position="501">
+              <caret line="71" column="1" lean-forward="true" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MYSQL_CAL.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rbi/MYSQL_CAL.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="98" lean-forward="false" selection-start-line="4" selection-start-column="90" selection-end-line="4" selection-end-column="98" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+                <marker date="1518148881184" expanded="true" signature="375:505" ph="SELECT `MW`,... TBL_52_CA_PROPERTIES_LEVEL_1" />
+                <marker date="1518148881184" expanded="true" signature="1118:1202" ph="SELECT `Ambi... TBL_52_CA_PROPERTIES_LEVEL_1" />
+                <marker date="1518148881184" expanded="true" signature="1547:1617" ph="SELECT * FRO... TBL_58_CA_COMPONENT_DM" />
+                <marker date="1518148881184" expanded="true" signature="2445:2523" ph="SELECT * FRO... TBL_59_COMPONENT_DAMAGE_PERSON" />
+                <marker date="1518148881184" expanded="true" signature="3363:3460" ph="SELECT * FRO... TBL_213_DM_IMPACT_EXEMPTION" />
+                <marker date="1518148881184" expanded="true" signature="3913:3990" ph="SELECT * FRO... TBL_204_DM_HTHA" />
+                <marker date="1518148881184" expanded="true" signature="5436:5502" ph="SELECT `E` F... TBL_511_DFB_THIN" />
+                <marker date="1518148881184" expanded="true" signature="7724:7819" ph="SELECT `SIUn... TBL_3B21_SI_CONVERSION" />
+                <marker date="1518148881184" expanded="true" signature="8178:8319" ph="SELECT `Mole... TBL_71_PROPERTIES_STORAGE_TANK" />
+                <marker date="1518148881184" expanded="true" signature="8745:8842" ph="SELECT * FRO... api_component_type" />
+                <marker date="1518148881184" expanded="true" signature="9602:9685" ph="SELECT MAX(I... rw_inspection_history" />
+                <marker date="1518148881184" expanded="true" signature="9602:9710" ph="SELECT MAX(I... rw_inspection_history" />
+                <marker date="1518148881184" expanded="true" signature="9602:9723" ph="SELECT MAX(I... rw_inspection_history" />
+                <marker date="1518148881184" expanded="true" signature="9602:9743" ph="SELECT MAX(I... rw_inspection_history" />
+                <marker date="1518148881184" expanded="true" signature="9602:9744" ph="SELECT MAX(I... rw_inspection_history" />
+                <marker date="1518148881184" expanded="true" signature="10184:10272" ph="SELECT MIN(I... rw_inspection_history" />
+                <marker date="1518148881184" expanded="true" signature="10184:10297" ph="SELECT MIN(I... rw_inspection_history" />
+                <marker date="1518148881184" expanded="true" signature="10184:10308" ph="SELECT MIN(I... rw_inspection_history" />
+                <marker date="1518148881184" expanded="true" signature="10184:10310" ph="SELECT MIN(I... rw_inspection_history" />
+                <marker date="1518148881184" expanded="true" signature="10184:10330" ph="SELECT MIN(I... rw_inspection_history" />
+                <marker date="1518148881184" expanded="true" signature="10184:10331" ph="SELECT MIN(I... rw_inspection_history" />
+                <marker date="1518148881184" expanded="true" signature="10765:10833" ph="SELECT COUNT... rw_inspection_history" />
+                <marker date="1518148881184" expanded="true" signature="10765:10913" ph="SELECT COUNT... rw_inspection_history" />
+                <marker date="1518148881184" expanded="true" signature="11270:11436" ph="SELECT MAX(I... rw_inspection_history" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,7 +130,7 @@
       <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rbi/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="272">
               <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
               <folding>
                 <element signature="e#219#228#0" expanded="true" />
@@ -196,7 +232,6 @@
         <option value="$PROJECT_DIR$/templates/page/home.html" />
         <option value="$PROJECT_DIR$/templates/home/new/Normal.html" />
         <option value="$PROJECT_DIR$/templates/home/new/newAllTank.html" />
-        <option value="$PROJECT_DIR$/rbi/MYSQL_CAL.py" />
         <option value="$PROJECT_DIR$/rbi/CA_CAL.py" />
         <option value="$PROJECT_DIR$/rbi/models.py" />
         <option value="$PROJECT_DIR$/rbi/DM_CAL.py" />
@@ -205,6 +240,7 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/runtime.txt" />
         <option value="$PROJECT_DIR$/rbi/wsgi.py" />
+        <option value="$PROJECT_DIR$/rbi/MYSQL_CAL.py" />
         <option value="$PROJECT_DIR$/rbi/settings.py" />
       </list>
     </option>
@@ -215,7 +251,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-44" />
     <option name="y" value="132" />
     <option name="width" value="1346" />
@@ -405,20 +441,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25945538" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2632375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26350245" sideWeight="0.5741301" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22541603" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26350245" sideWeight="0.42586988" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26350245" sideWeight="0.42586988" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2569558" sideWeight="0.596823" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -654,7 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15708">
           <caret line="924" column="78" lean-forward="false" selection-start-line="924" selection-start-column="78" selection-end-line="924" selection-end-column="78" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -662,75 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4777">
           <caret line="877" column="49" lean-forward="false" selection-start-line="877" selection-start-column="49" selection-end-line="877" selection-end-column="49" />
-          <folding>
-            <element signature="e#3688#3728#0" expanded="false" />
-            <element signature="e#3757#4591#0" expanded="false" />
-            <element signature="e#6022#7429#0" expanded="false" />
-            <element signature="e#7467#7552#0" expanded="false" />
-            <element signature="e#7592#7675#0" expanded="false" />
-            <element signature="e#7707#7842#0" expanded="false" />
-            <element signature="e#7882#8154#0" expanded="false" />
-            <element signature="e#8187#8635#0" expanded="false" />
-            <element signature="e#8672#10600#0" expanded="false" />
-            <element signature="e#10803#11085#0" expanded="false" />
-            <element signature="e#11120#11183#0" expanded="false" />
-            <element signature="e#11217#11590#0" expanded="false" />
-            <element signature="e#11626#11799#0" expanded="false" />
-            <element signature="e#11839#12355#0" expanded="false" />
-            <element signature="e#12395#12837#0" expanded="false" />
-            <element signature="e#12876#13308#0" expanded="false" />
-            <element signature="e#13347#13780#0" expanded="false" />
-            <element signature="e#13830#14218#0" expanded="false" />
-            <element signature="e#14264#14641#0" expanded="false" />
-            <element signature="e#14691#15188#0" expanded="false" />
-            <element signature="e#15237#15340#0" expanded="false" />
-            <element signature="e#15389#15586#0" expanded="false" />
-            <element signature="e#15624#15809#0" expanded="false" />
-            <element signature="e#15843#16275#0" expanded="false" />
-            <element signature="e#16317#16624#0" expanded="false" />
-            <element signature="e#16666#16993#0" expanded="false" />
-            <element signature="e#17029#17385#0" expanded="false" />
-            <element signature="e#17423#17810#0" expanded="false" />
-            <element signature="e#17848#18207#0" expanded="false" />
-            <element signature="e#18331#18380#0" expanded="false" />
-            <element signature="e#18415#29341#0" expanded="false" />
-            <element signature="e#29381#30697#0" expanded="false" />
-            <element signature="e#30733#32047#0" expanded="false" />
-            <element signature="e#32083#32429#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rbi/MYSQL_CAL.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2958">
-          <caret line="177" column="22" lean-forward="false" selection-start-line="177" selection-start-column="19" selection-end-line="177" selection-end-column="22" />
-          <folding>
-            <marker date="1518099660756" expanded="true" signature="348:478" ph="SELECT `MW`,... TBL_52_CA_PROPERTIES_LEVEL_1" />
-            <marker date="1518099660756" expanded="true" signature="1091:1175" ph="SELECT `Ambi... TBL_52_CA_PROPERTIES_LEVEL_1" />
-            <marker date="1518099660756" expanded="true" signature="1520:1590" ph="SELECT * FRO... TBL_58_CA_COMPONENT_DM" />
-            <marker date="1518099660756" expanded="true" signature="2418:2496" ph="SELECT * FRO... TBL_59_COMPONENT_DAMAGE_PERSON" />
-            <marker date="1518099660756" expanded="true" signature="3336:3433" ph="SELECT * FRO... TBL_213_DM_IMPACT_EXEMPTION" />
-            <marker date="1518099660756" expanded="true" signature="3886:3963" ph="SELECT * FRO... TBL_204_DM_HTHA" />
-            <marker date="1518099660756" expanded="true" signature="5409:5475" ph="SELECT `E` F... TBL_511_DFB_THIN" />
-            <marker date="1518099660756" expanded="true" signature="7697:7792" ph="SELECT `SIUn... TBL_3B21_SI_CONVERSION" />
-            <marker date="1518099660756" expanded="true" signature="8151:8292" ph="SELECT `Mole... TBL_71_PROPERTIES_STORAGE_TANK" />
-            <marker date="1518099660756" expanded="true" signature="8718:8815" ph="SELECT * FRO... api_component_type" />
-            <marker date="1518099660756" expanded="true" signature="9575:9658" ph="SELECT MAX(I... rw_inspection_history" />
-            <marker date="1518099660756" expanded="true" signature="9575:9683" ph="SELECT MAX(I... rw_inspection_history" />
-            <marker date="1518099660756" expanded="true" signature="9575:9696" ph="SELECT MAX(I... rw_inspection_history" />
-            <marker date="1518099660756" expanded="true" signature="9575:9716" ph="SELECT MAX(I... rw_inspection_history" />
-            <marker date="1518099660756" expanded="true" signature="9575:9717" ph="SELECT MAX(I... rw_inspection_history" />
-            <marker date="1518099660756" expanded="true" signature="10157:10245" ph="SELECT MIN(I... rw_inspection_history" />
-            <marker date="1518099660756" expanded="true" signature="10157:10270" ph="SELECT MIN(I... rw_inspection_history" />
-            <marker date="1518099660756" expanded="true" signature="10157:10281" ph="SELECT MIN(I... rw_inspection_history" />
-            <marker date="1518099660756" expanded="true" signature="10157:10283" ph="SELECT MIN(I... rw_inspection_history" />
-            <marker date="1518099660756" expanded="true" signature="10157:10303" ph="SELECT MIN(I... rw_inspection_history" />
-            <marker date="1518099660756" expanded="true" signature="10157:10304" ph="SELECT MIN(I... rw_inspection_history" />
-            <marker date="1518099660756" expanded="true" signature="10738:10806" ph="SELECT COUNT... rw_inspection_history" />
-            <marker date="1518099660756" expanded="true" signature="10738:10886" ph="SELECT COUNT... rw_inspection_history" />
-            <marker date="1518099660756" expanded="true" signature="11243:11409" ph="SELECT MAX(I... rw_inspection_history" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -738,31 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8551">
           <caret line="674" column="59" lean-forward="false" selection-start-line="674" selection-start-column="46" selection-end-line="674" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#23#0" expanded="false" />
-            <element signature="e#1059#1665#0" expanded="false" />
-            <element signature="e#1701#3832#0" expanded="false" />
-            <element signature="e#3876#7150#0" expanded="false" />
-            <element signature="e#7198#8308#0" expanded="false" />
-            <element signature="e#8357#9238#0" expanded="false" />
-            <element signature="e#9285#11972#0" expanded="false" />
-            <element signature="e#68321#69126#0" expanded="false" />
-            <element signature="e#69183#71712#0" expanded="false" />
-            <element signature="e#71773#74943#0" expanded="false" />
-            <element signature="e#75006#77195#0" expanded="false" />
-            <element signature="e#77257#78501#0" expanded="false" />
-            <element signature="e#78565#79577#0" expanded="false" />
-            <element signature="e#79631#80060#0" expanded="false" />
-            <element signature="e#80106#80875#0" expanded="false" />
-            <element signature="e#80926#81855#0" expanded="false" />
-            <element signature="e#81907#82837#0" expanded="false" />
-            <element signature="e#82889#83642#0" expanded="false" />
-            <element signature="e#83695#84481#0" expanded="false" />
-            <element signature="e#84525#84699#0" expanded="false" />
-            <element signature="e#84743#84853#0" expanded="false" />
-            <element signature="e#84901#85087#0" expanded="false" />
-            <element signature="e#85138#86243#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -770,9 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-391">
           <caret line="38" column="110" lean-forward="false" selection-start-line="38" selection-start-column="101" selection-end-line="38" selection-end-column="110" />
-          <folding>
-            <element signature="e#0#12#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -780,13 +718,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="599" column="55" lean-forward="false" selection-start-line="599" selection-start-column="28" selection-end-line="599" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rbi/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
+        <state relative-caret-position="16167">
           <caret line="952" column="39" lean-forward="false" selection-start-line="952" selection-start-column="39" selection-end-line="952" selection-end-column="39" />
           <folding>
             <element signature="e#468#496#0" expanded="true" />
@@ -820,7 +757,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rbi/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="272">
           <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
           <folding>
             <element signature="e#219#228#0" expanded="true" />
@@ -832,14 +769,47 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rbi/MYSQL_CAL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="98" lean-forward="false" selection-start-line="4" selection-start-column="90" selection-end-line="4" selection-end-column="98" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1518148881184" expanded="true" signature="375:505" ph="SELECT `MW`,... TBL_52_CA_PROPERTIES_LEVEL_1" />
+            <marker date="1518148881184" expanded="true" signature="1118:1202" ph="SELECT `Ambi... TBL_52_CA_PROPERTIES_LEVEL_1" />
+            <marker date="1518148881184" expanded="true" signature="1547:1617" ph="SELECT * FRO... TBL_58_CA_COMPONENT_DM" />
+            <marker date="1518148881184" expanded="true" signature="2445:2523" ph="SELECT * FRO... TBL_59_COMPONENT_DAMAGE_PERSON" />
+            <marker date="1518148881184" expanded="true" signature="3363:3460" ph="SELECT * FRO... TBL_213_DM_IMPACT_EXEMPTION" />
+            <marker date="1518148881184" expanded="true" signature="3913:3990" ph="SELECT * FRO... TBL_204_DM_HTHA" />
+            <marker date="1518148881184" expanded="true" signature="5436:5502" ph="SELECT `E` F... TBL_511_DFB_THIN" />
+            <marker date="1518148881184" expanded="true" signature="7724:7819" ph="SELECT `SIUn... TBL_3B21_SI_CONVERSION" />
+            <marker date="1518148881184" expanded="true" signature="8178:8319" ph="SELECT `Mole... TBL_71_PROPERTIES_STORAGE_TANK" />
+            <marker date="1518148881184" expanded="true" signature="8745:8842" ph="SELECT * FRO... api_component_type" />
+            <marker date="1518148881184" expanded="true" signature="9602:9685" ph="SELECT MAX(I... rw_inspection_history" />
+            <marker date="1518148881184" expanded="true" signature="9602:9710" ph="SELECT MAX(I... rw_inspection_history" />
+            <marker date="1518148881184" expanded="true" signature="9602:9723" ph="SELECT MAX(I... rw_inspection_history" />
+            <marker date="1518148881184" expanded="true" signature="9602:9743" ph="SELECT MAX(I... rw_inspection_history" />
+            <marker date="1518148881184" expanded="true" signature="9602:9744" ph="SELECT MAX(I... rw_inspection_history" />
+            <marker date="1518148881184" expanded="true" signature="10184:10272" ph="SELECT MIN(I... rw_inspection_history" />
+            <marker date="1518148881184" expanded="true" signature="10184:10297" ph="SELECT MIN(I... rw_inspection_history" />
+            <marker date="1518148881184" expanded="true" signature="10184:10308" ph="SELECT MIN(I... rw_inspection_history" />
+            <marker date="1518148881184" expanded="true" signature="10184:10310" ph="SELECT MIN(I... rw_inspection_history" />
+            <marker date="1518148881184" expanded="true" signature="10184:10330" ph="SELECT MIN(I... rw_inspection_history" />
+            <marker date="1518148881184" expanded="true" signature="10184:10331" ph="SELECT MIN(I... rw_inspection_history" />
+            <marker date="1518148881184" expanded="true" signature="10765:10833" ph="SELECT COUNT... rw_inspection_history" />
+            <marker date="1518148881184" expanded="true" signature="10765:10913" ph="SELECT COUNT... rw_inspection_history" />
+            <marker date="1518148881184" expanded="true" signature="11270:11436" ph="SELECT MAX(I... rw_inspection_history" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rbi/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+        <state relative-caret-position="501">
+          <caret line="71" column="1" lean-forward="true" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
           <folding />
         </state>
       </provider>

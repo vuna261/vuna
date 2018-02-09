@@ -2,7 +2,7 @@ import pymysql;
 from datetime import  datetime;
 from dateutil.relativedelta import relativedelta;
 import numpy as np;
-conn = pymysql.connect(host ='localhost',user = 'root', password = 'root', db = 'djangorbi');
+conn = pymysql.connect(host ='sql2.freemysqlhosting.net',user = 'sql2220301', password = 'nC4!fD3*', db = 'sql2220301');
 class MySQL_CAL:
     def GET_TBL_52(fluid):
         row = np.zeros(10);
