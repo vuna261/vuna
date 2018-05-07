@@ -1,1 +1,1 @@
-web: gunicorn rbi.wsgi
+web: gunicorn RbiCloud.wsgi
